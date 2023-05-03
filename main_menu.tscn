@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcip1t2w6mgw6"]
+
+[ext_resource type="Texture2D" uid="uid://dte1v4k2xf4d0" path="res://skeleton1.png" id="1_lkegj"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_lkegj")
+
+[node name="Margins" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VbuxContainer" type="VBoxContainer" parent="Margins"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="Margins/VbuxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="TextureButton2" type="TextureButton" parent="Margins/VbuxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
