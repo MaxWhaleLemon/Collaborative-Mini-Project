@@ -1,3 +1,5 @@
 res://default_env.tres
 res://main_menu.tscn
 res://scene_handler.tscn
+res://scene_handler_main.tscn
+res://scene_handler_main.gd

@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://dcip1t2w6mgw6"]
+[gd_scene load_steps=5 format=3 uid="uid://dcip1t2w6mgw6"]
 
 [ext_resource type="Texture2D" uid="uid://dte1v4k2xf4d0" path="res://skeleton1.png" id="1_lkegj"]
+[ext_resource type="Texture2D" uid="uid://dyvn1t1ynib6x" path="res://button_up2.png" id="2_5s4eg"]
+[ext_resource type="Texture2D" uid="uid://bwvlhhv10526e" path="res://button_up.png" id="3_ll5nn"]
+[ext_resource type="FontFile" uid="uid://dkiu3auiayguu" path="res://VCR_OSD_MONO_1.001.ttf" id="4_jwaxq"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -34,10 +37,49 @@ theme_override_constants/margin_bottom = 50
 [node name="VbuxContainer" type="VBoxContainer" parent="Margins"]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="Margins/VbuxContainer"]
+[node name="PlayButton" type="TextureButton" parent="Margins/VbuxContainer"]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
+texture_normal = ExtResource("2_5s4eg")
+texture_pressed = ExtResource("3_ll5nn")
+stretch_mode = 5
 
-[node name="TextureButton2" type="TextureButton" parent="Margins/VbuxContainer"]
+[node name="Label" type="Label" parent="Margins/VbuxContainer/PlayButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_jwaxq")
+text = "PLAY"
+
+[node name="QuitButton" type="TextureButton" parent="Margins/VbuxContainer"]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
+texture_normal = ExtResource("2_5s4eg")
+texture_pressed = ExtResource("3_ll5nn")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Margins/VbuxContainer/QuitButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_jwaxq")
+text = "QUIT
+"
