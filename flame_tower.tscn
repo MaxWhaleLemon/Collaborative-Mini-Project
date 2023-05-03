@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdy0243ey6vgj"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_dn4nl"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_salsi"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_j27rm"]
+
+[node name="FlameTower" type="Node2D"]
+
+[node name="Base" type="Sprite2D" parent="."]
+position = Vector2(160.25, 94.25)
+scale = Vector2(321.5, 189.5)
+texture = SubResource("CanvasTexture_dn4nl")
+
+[node name="Turret" type="Sprite2D" parent="."]
+modulate = Color(1, 0.121569, 0.0980392, 1)
+position = Vector2(153, 96)
+scale = Vector2(168.108, 119.029)
+texture = SubResource("CanvasTexture_salsi")
+
+[node name="Sprite2D" type="Sprite2D" parent="Turret"]
+position = Vector2(1.07669, 0.0168026)
+scale = Vector2(1.20904, 0.762419)
+texture = SubResource("CanvasTexture_j27rm")

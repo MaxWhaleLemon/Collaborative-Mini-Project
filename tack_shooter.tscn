@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://dafprxubj1sn6"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_32p6y"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_jmfln"]
+
+[node name="TackShooter" type="Node2D"]
+
+[node name="Base" type="Sprite2D" parent="."]
+position = Vector2(160.25, 94.25)
+scale = Vector2(321.5, 189.5)
+texture = SubResource("CanvasTexture_32p6y")
+
+[node name="Turret" type="Sprite2D" parent="."]
+modulate = Color(0, 1, 1, 1)
+position = Vector2(162, 97)
+rotation = -6.28319
+scale = Vector2(168.108, 119.029)
+texture = SubResource("CanvasTexture_jmfln")
+
+[node name="Muzzle1" type="Marker2D" parent="Turret"]
+position = Vector2(0.0178457, -1.48703)
+
+[node name="Muzzle2" type="Marker2D" parent="Turret"]
+position = Vector2(1.61206, 0.0336053)
+
+[node name="Muzzle3" type="Marker2D" parent="Turret"]
+position = Vector2(-1.4455, 0.0336048)
+
+[node name="Muzzle4" type="Marker2D" parent="Turret"]
+position = Vector2(0.0118968, 1.3274)

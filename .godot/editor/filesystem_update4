@@ -1,2 +1,10 @@
+res://Sprite2D2.gd
 res://default_env.tres
+res://tank_sniper.tscn
 res://scene_handler.tscn
+res://tack_shooter.tscn
+res://flame_tower.tscn
+res://Turret.gd
+res://mapTest.tscn
+res://tank_sniper.gd
+res://enemy_test.tscn
