@@ -1,5 +1,11 @@
 2a60927148abd1d33b818b535e306557
-::res://::1682659296
-default_env.tres::Environment::-1::1682554021::0::1::::<><>::
+::res://::1683078888
+button_up2.png::CompressedTexture2D::8887983021991533769::1683078537::1683078538::1::::<><>::
+button_up.png::CompressedTexture2D::3974607965363118734::1683078537::1683078538::1::::<><>::
+default_env.tres::Environment::1486416510189372710::1683078763::0::1::::<><>::
 icon.png::CompressedTexture2D::3684081947584409421::1682552937::1682554021::1::::<><>::
-Main.tscn::PackedScene::-1::1682553600::0::1::::<><>::
+macbar.png::CompressedTexture2D::3442166436921997433::1682660435::1682660435::1::::<><>::
+main_menu.tscn::PackedScene::7317112986615727475::1683078763::0::1::::<><>::uid://dte1v4k2xf4d0<>uid://dyvn1t1ynib6x<>uid://bwvlhhv10526e
+scene_handler.tscn::PackedScene::3560216725781660269::1683078763::0::1::::<><>::
+skeleton1.png::CompressedTexture2D::8502725274585009131::1682660669::1682660670::1::::<><>::
+VCR_OSD_MONO_1.001.ttf::FontFile::7878929882837294228::1683078888::1683078888::1::::<><>::

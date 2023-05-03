@@ -1,0 +1,111 @@
+[gd_scene load_steps=7 format=3 uid="uid://e71ekidolrtd"]
+
+[ext_resource type="Texture2D" uid="uid://k7pwfcmtpvxn" path="res://AutumnLeafMap1.png" id="1_rxqts"]
+[ext_resource type="PackedScene" uid="uid://cfqaj6af2oybw" path="res://tank_sniper.tscn" id="2_4oy3l"]
+[ext_resource type="PackedScene" uid="uid://dafprxubj1sn6" path="res://tack_shooter.tscn" id="3_ms1mf"]
+[ext_resource type="PackedScene" uid="uid://bdy0243ey6vgj" path="res://flame_tower.tscn" id="4_83jji"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7ork7"]
+texture = ExtResource("1_rxqts")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_utyco"]
+tile_size = Vector2i(64, 64)
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "Terrain 0"
+terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
+sources/0 = SubResource("TileSetAtlasSource_7ork7")
+
+[node name="Map" type="Node2D"]
+position = Vector2(394, 194)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.2, 1)
+texture = ExtResource("1_rxqts")
+
+[node name="Tanks" type="Node2D" parent="."]
+
+[node name="TankSniper" parent="Tanks" instance=ExtResource("2_4oy3l")]
+position = Vector2(-232, -52)
+scale = Vector2(0.200865, 0.196973)
+
+[node name="TackShooter" parent="Tanks" instance=ExtResource("3_ms1mf")]
+position = Vector2(7, -111)
+scale = Vector2(0.2, 0.2)
+
+[node name="FlameTower" parent="Tanks" instance=ExtResource("4_83jji")]
+position = Vector2(-59, 65)
+rotation = -1.5708
+scale = Vector2(0.2, 0.2)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_utyco")
+cell_quadrant_size = 64
+format = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.12549, 0.113725, 1, 1)
