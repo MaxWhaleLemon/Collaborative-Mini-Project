@@ -1,10 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlw3axd62y5qm"]
+[gd_scene load_steps=3 format=3 uid="uid://dlw3axd62y5qm"]
+
+[ext_resource type="Script" path="res://enemy_test.gd" id="1_uxf77"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_4hc3k"]
 
-[node name="EnemyTest" type="Node2D"]
+[node name="EnemyTest" type="Node2D" groups=["enemy"]]
+script = ExtResource("1_uxf77")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Enemy" type="Sprite2D" parent="."]
 modulate = Color(0.0588235, 0.0470588, 0, 1)
 scale = Vector2(-43.7727, 35.2193)
 texture = SubResource("CanvasTexture_4hc3k")
