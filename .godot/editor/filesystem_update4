@@ -1,7 +1,2 @@
 res://default_env.tres
-res://scene_handler.tscn
-res://main_menu.tscn
-res://scene_handler_main.tscn
-res://mapTest.tscn
-res://scene_handler_main.gd
-res://global_script.gd
+res://enemy_test.tscn

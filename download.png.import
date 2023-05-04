@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://k7pwfcmtpvxn"
-path="res://.godot/imported/AutumnLeafMap1.png-6c3b4d50146720551a4ce815e901e0f5.ctex"
+uid="uid://wplm7ud0tloi"
+path="res://.godot/imported/download.png-0fe1829d5b45fcf42c18266423ed01d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://AutumnLeafMap1.png"
-dest_files=["res://.godot/imported/AutumnLeafMap1.png-6c3b4d50146720551a4ce815e901e0f5.ctex"]
+source_file="res://download.png"
+dest_files=["res://.godot/imported/download.png-0fe1829d5b45fcf42c18266423ed01d8.ctex"]
 
 [params]
 

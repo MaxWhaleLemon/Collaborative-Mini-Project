@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://e71ekidolrtd"]
+[gd_scene load_steps=8 format=3 uid="uid://e71ekidolrtd"]
 
 [ext_resource type="Texture2D" uid="uid://k7pwfcmtpvxn" path="res://AutumnLeafMap1.png" id="1_rxqts"]
 [ext_resource type="PackedScene" uid="uid://cfqaj6af2oybw" path="res://tank_sniper.tscn" id="2_4oy3l"]
 [ext_resource type="PackedScene" uid="uid://dafprxubj1sn6" path="res://tack_shooter.tscn" id="3_ms1mf"]
 [ext_resource type="PackedScene" uid="uid://bdy0243ey6vgj" path="res://flame_tower.tscn" id="4_83jji"]
+[ext_resource type="PackedScene" uid="uid://dlw3axd62y5qm" path="res://enemy_test.tscn" id="5_w7gav"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7ork7"]
 texture = ExtResource("1_rxqts")
@@ -105,5 +106,7 @@ tile_set = SubResource("TileSet_utyco")
 cell_quadrant_size = 64
 format = 2
 
-[node name="ColorRect" type="ColorRect" parent="."]
-color = Color(0.12549, 0.113725, 1, 1)
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="EnemyTest" parent="Enemies" instance=ExtResource("5_w7gav")]
+position = Vector2(-114, -92)
