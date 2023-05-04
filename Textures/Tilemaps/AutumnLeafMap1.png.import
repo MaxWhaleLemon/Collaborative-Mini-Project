@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://k7pwfcmtpvxn"
-path="res://.godot/imported/AutumnLeafMap1.png-6c3b4d50146720551a4ce815e901e0f5.ctex"
+path="res://.godot/imported/AutumnLeafMap1.png-266203fcb186f614f3bdda1346d38120.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://AutumnLeafMap1.png"
-dest_files=["res://.godot/imported/AutumnLeafMap1.png-6c3b4d50146720551a4ce815e901e0f5.ctex"]
+source_file="res://Textures/Tilemaps/AutumnLeafMap1.png"
+dest_files=["res://.godot/imported/AutumnLeafMap1.png-266203fcb186f614f3bdda1346d38120.ctex"]
 
 [params]
 

@@ -1,5 +1,6 @@
 res://default_env.tres
-res://main_menu.tscn
-res://scene_handler.tscn
 res://scene_handler_main.tscn
+res://Waves.gd
+res://Grid.gd
+res://ThomasScriptGen/pathmaker.gd
 res://scene_handler_main.gd
