@@ -1,8 +1,2 @@
 res://default_env.tres
-res://mapTest.tscn
-res://scene_handler.tscn
-res://tank_sniper.tscn
-res://tack_shooter.tscn
-res://flame_tower.tscn
 res://enemy_test.tscn
-res://bullet_sniper.tscn
