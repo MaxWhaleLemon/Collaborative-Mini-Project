@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyiycqq0e3j3a"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_f23ig"]
+
+[node name="BulletSniper" type="Node2D"]
+
+[node name="Bullet" type="Sprite2D" parent="."]
+modulate = Color(0.168627, 0.4, 0, 1)
+scale = Vector2(200, 100)
+texture = SubResource("CanvasTexture_f23ig")
