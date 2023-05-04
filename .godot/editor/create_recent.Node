@@ -1,8 +1,12 @@
-Node
-Label
-TextureButton
 ColorRect
-Button
+ProgressBar
+TextureProgressBar
 VBoxContainer
+Label
+HBoxContainer
 MarginContainer
+Control
+Node
+TextureButton
+Button
 TextureRect

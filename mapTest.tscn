@@ -106,6 +106,4 @@ cell_quadrant_size = 64
 format = 2
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
 color = Color(0.12549, 0.113725, 1, 1)
