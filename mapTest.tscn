@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://e71ekidolrtd"]
+[gd_scene load_steps=9 format=3 uid="uid://e71ekidolrtd"]
 
+[ext_resource type="Script" path="res://GameScene.gd" id="1_2obbm"]
 [ext_resource type="Texture2D" uid="uid://k7pwfcmtpvxn" path="res://Textures/Tilemaps/AutumnLeafMap1.png" id="1_rxqts"]
 [ext_resource type="PackedScene" uid="uid://cfqaj6af2oybw" path="res://tank_sniper.tscn" id="2_4oy3l"]
 [ext_resource type="PackedScene" uid="uid://dafprxubj1sn6" path="res://tack_shooter.tscn" id="3_ms1mf"]
 [ext_resource type="PackedScene" uid="uid://bdy0243ey6vgj" path="res://flame_tower.tscn" id="4_83jji"]
-[ext_resource type="PackedScene" uid="uid://dlw3axd62y5qm" path="res://enemy_test.tscn" id="5_w7gav"]
+[ext_resource type="PackedScene" uid="uid://cvm7xs0tjrbqf" path="res://enemy_test.tscn" id="5_w7gav"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7ork7"]
 texture = ExtResource("1_rxqts")
@@ -81,6 +82,7 @@ sources/0 = SubResource("TileSetAtlasSource_7ork7")
 
 [node name="Map" type="Node2D"]
 position = Vector2(394, 194)
+script = ExtResource("1_2obbm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(1.2, 1)
@@ -101,7 +103,7 @@ position = Vector2(-59, 65)
 rotation = -1.5708
 scale = Vector2(0.2, 0.2)
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="TileMap" type="TileMap" parent="." groups=["Path"]]
 tile_set = SubResource("TileSet_utyco")
 cell_quadrant_size = 64
 format = 2
@@ -109,4 +111,4 @@ format = 2
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="EnemyTest" parent="Enemies" instance=ExtResource("5_w7gav")]
-position = Vector2(-117, -95)
+position = Vector2(-121, -99)

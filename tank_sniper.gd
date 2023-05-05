@@ -1,7 +1,6 @@
 extends Node2D
 
 
-
 func _physics_process(delta):
 	turn()
 	if ready:
@@ -10,10 +9,13 @@ func _physics_process(delta):
 
 func turn():
 	var enemies = get_tree().get_nodes_in_group("enemy")
-	
 	if len(enemies) > 0:
 		var first = enemies[0]
 		get_node("Turret").look_at(first.global_position)
-
+		if ready:
+			fire()
 func fire():
-	print("hi")
+	pass
+
+func _ready():
+	pass
