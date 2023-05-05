@@ -1,2 +1,10 @@
 res://default_env.tres
+res://tank_sniper.tscn
+res://global_script.gd
+res://tank_sniper.gd
+res://tack_shooter.tscn
+res://scene_handler.tscn
+res://mapTest.tscn
+res://flame_tower.tscn
 res://enemy_test.tscn
+res://bullet_sniper.tscn

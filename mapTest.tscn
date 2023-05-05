@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://e71ekidolrtd"]
 
-[ext_resource type="Texture2D" uid="uid://k7pwfcmtpvxn" path="res://AutumnLeafMap1.png" id="1_rxqts"]
+[ext_resource type="Texture2D" uid="uid://k7pwfcmtpvxn" path="res://Textures/Tilemaps/AutumnLeafMap1.png" id="1_rxqts"]
 [ext_resource type="PackedScene" uid="uid://cfqaj6af2oybw" path="res://tank_sniper.tscn" id="2_4oy3l"]
 [ext_resource type="PackedScene" uid="uid://dafprxubj1sn6" path="res://tack_shooter.tscn" id="3_ms1mf"]
 [ext_resource type="PackedScene" uid="uid://bdy0243ey6vgj" path="res://flame_tower.tscn" id="4_83jji"]
@@ -109,4 +109,4 @@ format = 2
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="EnemyTest" parent="Enemies" instance=ExtResource("5_w7gav")]
-position = Vector2(-114, -92)
+position = Vector2(-117, -95)
