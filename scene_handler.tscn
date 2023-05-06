@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bqyuiqhis7ik0"]
+[gd_scene load_steps=6 format=3 uid="uid://b7wpgx5qwgx8t"]
 
-[ext_resource type="PackedScene" uid="uid://e71ekidolrtd" path="res://mapTest.tscn" id="1_wyawx"]
+[ext_resource type="Script" path="res://GameScene.gd" id="1_kypyb"]
+[ext_resource type="PackedScene" uid="uid://cwcjvc1kght1b" path="res://Map1.tscn" id="1_wyawx"]
 [ext_resource type="FontFile" uid="uid://dkiu3auiayguu" path="res://VCR_OSD_MONO_1.001.ttf" id="2_vjhjc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q1oep"]
@@ -10,6 +11,7 @@ bg_color = Color(0.270588, 0, 0.0156863, 1)
 bg_color = Color(1, 0, 0, 1)
 
 [node name="Scene Handler Gameplay" type="Node"]
+script = ExtResource("1_kypyb")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 modulate = Color(0.980392, 0.980392, 0.980392, 1)

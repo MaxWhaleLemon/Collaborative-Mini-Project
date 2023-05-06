@@ -1,6 +1,14 @@
 res://default_env.tres
-res://TileTest.tscn
+res://mapTest.tscn
 res://scene_handler_main.gd
-res://ThomasScriptGen/pathmaker.gd
-res://main_menu.tscn
+res://enemy_test.gd
+res://GameScene.gd
 res://scene_handler.tscn
+res://tank_sniper.tscn
+res://tack_shooter.tscn
+res://flame_tower.tscn
+res://bullet_sniper.tscn
+res://enemy_test.tscn
+res://ThomasScriptGen/pathmaker.gd
+res://Enemies/enemy_test.tscn
+res://Map1.tscn

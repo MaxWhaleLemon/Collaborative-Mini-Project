@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7hfnb3dcwymd"
-path="res://.godot/imported/dirt1.png-72ddef0464e88ca4109dff025c9b3673.ctex"
+uid="uid://k7pwfcmtpvxn"
+path="res://.godot/imported/AutumnLeafMap1.png-9f04b71757e43b4f16eb3af04ee318c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Tilemaps/dirt1.png"
-dest_files=["res://.godot/imported/dirt1.png-72ddef0464e88ca4109dff025c9b3673.ctex"]
+source_file="res://Enemies/Textures/Tilemaps/AutumnLeafMap1.png"
+dest_files=["res://.godot/imported/AutumnLeafMap1.png-9f04b71757e43b4f16eb3af04ee318c7.ctex"]
 
 [params]
 
