@@ -1,2 +1,6 @@
 res://default_env.tres
-res://enemy_test.tscn
+res://TileTest.tscn
+res://scene_handler_main.gd
+res://ThomasScriptGen/pathmaker.gd
+res://main_menu.tscn
+res://scene_handler.tscn
