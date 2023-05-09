@@ -4,7 +4,7 @@ extends Resource
 # Size in rows and columns
 @export var size := Vector2(15, 15)
 # tile size
-@export var tile_size := Vector2(64, 64)
+@export var tile_size := Vector2(32, 32)
 
 #half of tile, helps calculate center of grid
 var half_tile_size = tile_size / 2
