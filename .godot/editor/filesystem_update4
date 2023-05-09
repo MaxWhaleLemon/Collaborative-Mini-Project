@@ -12,3 +12,10 @@ res://enemy_test.tscn
 res://ThomasScriptGen/pathmaker.gd
 res://Enemies/enemy_test.tscn
 res://Map1.tscn
+res://tank_sniper.gd
+res://GameData.gd
+res://flame_tower.gd
+res://Enemies/enemy_test.gd
+res://bullet_sniper.gd
+res://global_script.gd
+res://Turret.gd
