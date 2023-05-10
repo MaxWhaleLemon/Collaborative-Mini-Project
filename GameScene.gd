@@ -1,4 +1,5 @@
-extends Node2D
+extends Node Node2D
+
 
 var map_node
 var current_wave = 0
