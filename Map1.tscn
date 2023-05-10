@@ -1,11 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://cwcjvc1kght1b"]
+[gd_scene load_steps=9 format=3 uid="uid://cwcjvc1kght1b"]
 
 [ext_resource type="Script" path="res://GameScene.gd" id="1_2obbm"]
 [ext_resource type="Texture2D" uid="uid://k7pwfcmtpvxn" path="res://Enemies/Textures/Tilemaps/AutumnLeafMap1.png" id="1_rxqts"]
 [ext_resource type="PackedScene" uid="uid://cfqaj6af2oybw" path="res://tank_sniper.tscn" id="2_4oy3l"]
 [ext_resource type="PackedScene" uid="uid://dafprxubj1sn6" path="res://tack_shooter.tscn" id="3_ms1mf"]
 [ext_resource type="PackedScene" uid="uid://bdy0243ey6vgj" path="res://flame_tower.tscn" id="4_83jji"]
-[ext_resource type="PackedScene" uid="uid://cvm7xs0tjrbqf" path="res://Enemies/enemy_test.tscn" id="5_w7gav"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7ork7"]
 texture = ExtResource("1_rxqts")
@@ -82,9 +81,9 @@ sources/0 = SubResource("TileSetAtlasSource_7ork7")
 
 [sub_resource type="Curve2D" id="Curve2D_8icq4"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -199, -34, 0, 0, 0, 0, -265, -24, 0, 0, 0, 0, -330, -29, 0, 0, 0, 0, -341, 40, 0, 0, 0, 0, -343, 83, 0, 0, 0, 0, -340, 162, 0, 0, 0, 0, -265, 174, 0, 0, 0, 0, -198, 166, 0, 0, 0, 0, 158, -156)
+"points": PackedVector2Array(0, 0, 0, 0, -190, -150, 0, 0, 0, 0, -352, -151, 0, 0, 0, 0, -348, -36, 0, 0, 0, 0, -244, -46, 0, 0, 0, 0, -246, -148, 0, 0, 0, 0, -245, -54)
 }
-point_count = 9
+point_count = 6
 
 [node name="Map1" type="Node2D"]
 position = Vector2(394, 194)
@@ -117,7 +116,4 @@ format = 2
 [node name="Path" type="Path2D" parent="TileMap"]
 curve = SubResource("Curve2D_8icq4")
 
-[node name="Enemies" type="Node2D" parent="."]
-
-[node name="EnemyTest" parent="Enemies" instance=ExtResource("5_w7gav")]
-position = Vector2(-204, -99)
+[node name="SubViewport" type="SubViewport" parent="."]

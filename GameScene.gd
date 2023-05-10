@@ -1,5 +1,4 @@
-extends Node Node2D
-
+extends Node
 
 var map_node
 var current_wave = 0
@@ -7,6 +6,7 @@ var enemies_in_wave = 0
 
 func _ready():
 	map_node = get_node("TileMap")
+	print('running ready, map_node is', map_node)
 	start_next_wave()
 
 # Called when the node enters the scene tree for the first time.
@@ -16,12 +16,13 @@ func start_next_wave():
 	spawn_enemies(wave_data)
 
 func retrieve_wave_data():
-	var wave_data = [["enemy_test", 0.7], ["enemy_test", 0.1]]
+	var wave_data = [["enemy_test", 3.0], ["enemy_test", 0.1]]
 	current_wave +- 1
 	enemies_in_wave = wave_data.size()
 	return wave_data
 
 func spawn_enemies(wave_data):
+	print('spawning enemies, map_node is', map_node)
 	for i in wave_data:
 		var new_enemy = load("res://Enemies/" + i[0] + ".tscn").instantiate()
 		map_node.get_node("Path").add_child(new_enemy, true)

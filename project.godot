@@ -18,6 +18,7 @@ config/icon="res://icon.png"
 [autoload]
 
 GlobalScript="*res://global_script.gd"
+GameData="*res://GameData.gd"
 
 [gui]
 
