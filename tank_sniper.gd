@@ -3,21 +3,22 @@ extends Node2D
 var enemy = true
 var enemy_array = []
 var built = true
+var readyBullet = true
+var type = "TankSniper"
 
 
 func _physics_process(_delta):
 	if  enemy_array.size() !=0 and built:
 		select_enemy()
 		turn()
-	else:
-		enemy = null
 		if ready:
 			fire()
+	else:
+		enemy = null
 
 func select_enemy():
 	var enemy_progress_array = []
 	for i in enemy_array:
-		#print(i.progress)
 		enemy_progress_array.append(i.progress)
 	var max_progress = enemy_progress_array.max()
 	var enemy_index = enemy_progress_array.find(max_progress)
@@ -25,15 +26,14 @@ func select_enemy():
 
 
 func turn():
-	#var enemies = get_tree().get_nodes_in_group("enemy")
-	#if len(enemies) > 0:
-		#var first = enemies[0]
-		print("i am looking at enemy", enemy)
-		get_node("Turret").look_at(enemy.global_position)
-		#if ready:
-		#	fire()
+	get_node("Turret").look_at(enemy.global_position)
+
 func fire():
-	pass
+	readyBullet = false
+	
+	enemy.on_hit(GameData.tower_data[type]["damage"])
+	await get_tree().create_timer(GameData.tower_data[type]["rof"]).timeout
+	readyBullet = true
 
 func _ready():
 	if built:
