@@ -1,4 +1,4 @@
-extends Node2D
+extends Grid
 
 var enemy = true
 var enemy_array = []
