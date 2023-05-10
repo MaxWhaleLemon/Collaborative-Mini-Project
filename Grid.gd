@@ -1,5 +1,5 @@
 class_name Grid
-extends Resource
+extends Node2D
 
 # Size in rows and columns
 @export var size := Vector2(15, 15)

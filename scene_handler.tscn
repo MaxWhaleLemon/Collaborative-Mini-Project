@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://b7wpgx5qwgx8t"]
 
-[ext_resource type="Script" path="res://GameScene.gd" id="1_kypyb"]
+[ext_resource type="Script" path="res://scene_handler_GUI.gd" id="1_svlwm"]
 [ext_resource type="PackedScene" uid="uid://cwcjvc1kght1b" path="res://Map1.tscn" id="1_wyawx"]
 [ext_resource type="FontFile" uid="uid://dkiu3auiayguu" path="res://VCR_OSD_MONO_1.001.ttf" id="2_vjhjc"]
 
@@ -10,8 +10,8 @@ bg_color = Color(0.270588, 0, 0.0156863, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u33kc"]
 bg_color = Color(1, 0, 0, 1)
 
-[node name="Scene Handler Gameplay" type="Node"]
-script = ExtResource("1_kypyb")
+[node name="Scene Handler GUI" type="Node"]
+script = ExtResource("1_svlwm")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 modulate = Color(0.980392, 0.980392, 0.980392, 1)
@@ -25,6 +25,74 @@ grow_vertical = 2
 modulate = Color(0.541176, 0.541176, 0.541176, 1)
 custom_minimum_size = Vector2(350, 0)
 layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/InfoBarLeft"]
+layout_mode = 2
+offset_left = 50.0
+offset_right = 294.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/InfoBarLeft/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="Round Text" type="Label" parent="HBoxContainer/InfoBarLeft/HBoxContainer"]
+modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(60, 300)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_vjhjc")
+theme_override_font_sizes/font_size = 50
+text = "ROUND"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RoundNumber" type="Label" parent="HBoxContainer/InfoBarLeft/HBoxContainer"]
+modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(60, 300)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_vjhjc")
+theme_override_font_sizes/font_size = 50
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BoxContainer" type="BoxContainer" parent="HBoxContainer/InfoBarLeft"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -50.5
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+vertical = true
+
+[node name="StarShooterSelect" type="Button" parent="HBoxContainer/InfoBarLeft/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_vjhjc")
+theme_override_font_sizes/font_size = 50
+text = "STAR SHOOTER
+"
+
+[node name="FlameThrowerSelect" type="Button" parent="HBoxContainer/InfoBarLeft/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_vjhjc")
+theme_override_font_sizes/font_size = 50
+text = "FLAMETHROWER
+"
+
+[node name="SniperSelect" type="Button" parent="HBoxContainer/InfoBarLeft/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_vjhjc")
+theme_override_font_sizes/font_size = 50
+text = "SNIPER"
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
 custom_minimum_size = Vector2(600, 0)
