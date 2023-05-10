@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cfqaj6af2oybw"]
+[gd_scene load_steps=7 format=3 uid="uid://cfqaj6af2oybw"]
 
 [ext_resource type="Script" path="res://tank_sniper.gd" id="1_3dy0k"]
 [ext_resource type="Script" path="res://Turret.gd" id="1_6y0pi"]
@@ -8,6 +8,9 @@
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5rso6"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_k5nmw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_irsal"]
+radius = 863.99
 
 [node name="TankSniper" type="Node2D"]
 script = ExtResource("1_3dy0k")
@@ -29,3 +32,12 @@ script = ExtResource("1_6y0pi")
 
 [node name="Muzzle" type="Marker2D" parent="Turret"]
 position = Vector2(1.11179, -0.058823)
+
+[node name="Range" type="Area2D" parent="."]
+position = Vector2(149, 85)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Range"]
+shape = SubResource("CircleShape2D_irsal")
+
+[connection signal="body_entered" from="Range" to="." method="_on_range_body_entered"]
+[connection signal="body_exited" from="Range" to="." method="_on_range_body_exited"]

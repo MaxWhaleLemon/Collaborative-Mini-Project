@@ -60,6 +60,29 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("4_jwaxq")
 text = "PLAY"
 
+[node name="LeaderboardsButton" type="TextureButton" parent="Margins/VbuxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+texture_normal = ExtResource("2_5s4eg")
+texture_pressed = ExtResource("3_ll5nn")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Margins/VbuxContainer/LeaderboardsButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_jwaxq")
+text = "LEADERBOARDS"
+
 [node name="QuitButton" type="TextureButton" parent="Margins/VbuxContainer"]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
