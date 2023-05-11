@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://b7wpgx5qwgx8t"]
 
 [ext_resource type="Script" path="res://scene_handler_GUI.gd" id="1_svlwm"]
-[ext_resource type="PackedScene" uid="uid://cwcjvc1kght1b" path="res://Map1.tscn" id="1_wyawx"]
+[ext_resource type="PackedScene" uid="uid://cbonfwkwmq331" path="res://Map1.tscn" id="1_wyawx"]
 [ext_resource type="FontFile" uid="uid://dkiu3auiayguu" path="res://VCR_OSD_MONO_1.001.ttf" id="2_vjhjc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q1oep"]
