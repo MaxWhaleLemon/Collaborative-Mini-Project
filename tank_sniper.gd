@@ -30,9 +30,9 @@ func turn():
 
 func fire():
 	readyBullet = false
-	
 	enemy.on_hit(GameData.tower_data[type]["damage"])
 	await get_tree().create_timer(GameData.tower_data[type]["rof"]).timeout
+	
 	readyBullet = true
 
 func _ready():

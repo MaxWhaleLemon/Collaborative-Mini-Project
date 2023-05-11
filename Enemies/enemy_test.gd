@@ -1,7 +1,13 @@
 extends PathFollow2D
 
 var speed = 150
-var hp  = 30
+var hp  = 3000
+
+@onready var health_bar = get_node("HealthBar")
+
+func _ready():
+	health_bar.max_value = hp 
+	health_bar.value = hp
 
 func _physics_process(_delta):
 	move(_delta)
@@ -11,6 +17,7 @@ func move(_delta):
 
 func on_hit(damage):
 	hp -= damage
+	health_bar.value = hp
 	if hp <= 0:
 		on_destroy()
 
