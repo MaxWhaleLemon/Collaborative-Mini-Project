@@ -16,3 +16,5 @@ func on_hit(damage):
 
 func on_destroy():
 	self.queue_free()
+
+
