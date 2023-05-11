@@ -33,7 +33,7 @@ text = "HIGHEST SCORE:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Leaderboard" type="Label" parent="VBoxContainer"]
+[node name="HighScore" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_g3dg0")
 theme_override_font_sizes/font_size = 80
