@@ -2,7 +2,10 @@
 
 [ext_resource type="Script" path="res://scene_handler_GUI.gd" id="1_svlwm"]
 [ext_resource type="PackedScene" uid="uid://cbonfwkwmq331" path="res://Map1.tscn" id="1_wyawx"]
+<<<<<<< Updated upstream
 [ext_resource type="TileSet" uid="uid://dojcsesno7sh2" path="res://TileTest.tres" id="2_61e48"]
+=======
+>>>>>>> Stashed changes
 [ext_resource type="FontFile" uid="uid://dkiu3auiayguu" path="res://VCR_OSD_MONO_1.001.ttf" id="2_vjhjc"]
 [ext_resource type="Texture2D" uid="uid://rws8el7xc2fm" path="res://ammocircle.png" id="4_dceh6"]
 
@@ -175,16 +178,18 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -30.0
-offset_top = -300.0
-offset_right = 30.0
+offset_left = -175.0
+offset_top = -619.0
+offset_right = 157.0
+offset_bottom = -24.0
 grow_horizontal = 2
 grow_vertical = 0
 
 [node name="ProgressBar" type="ProgressBar" parent="HBoxContainer/InfoBarRight/VBoxContainer"]
-custom_minimum_size = Vector2(125, 1000)
+custom_minimum_size = Vector2(125, 20)
 layout_mode = 2
 size_flags_horizontal = 4
+size_flags_vertical = 3
 theme_override_styles/background = SubResource("StyleBoxFlat_q1oep")
 theme_override_styles/fill = SubResource("StyleBoxFlat_u33kc")
 value = 39.0
