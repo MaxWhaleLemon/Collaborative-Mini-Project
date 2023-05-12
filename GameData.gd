@@ -2,7 +2,7 @@ extends Node
 
 var tower_data = {
 	"TankSniper": {
-		"damage": 200,
+		"damage": 20,
 		"rof": 2,
 		"range": 1050
 	}
