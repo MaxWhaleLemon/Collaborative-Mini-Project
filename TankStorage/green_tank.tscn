@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://deyeqrkkirdgu"]
+
+[ext_resource type="Script" path="res://GreenTank.gd" id="1_8ckme"]
+[ext_resource type="Texture2D" uid="uid://dpsfuv6ewn2xy" path="res://TankStorage/GreenTankShooter.png" id="2_nuo75"]
+[ext_resource type="Texture2D" uid="uid://jlhfylr4slr8" path="res://TankStorage/GreenTankBase.png" id="2_prja4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gekfk"]
+size = Vector2(64.75, 61.25)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7hf0y"]
+
+[node name="GreenTank" type="StaticBody2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_8ckme")
+
+[node name="base" type="Sprite2D" parent="."]
+texture = ExtResource("2_prja4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.375, 0)
+shape = SubResource("RectangleShape2D_gekfk")
+one_way_collision_margin = 0.0
+
+[node name="Area" type="Marker2D" parent="."]
+position = Vector2(32, 0)
+
+[node name="GreenGun" type="Sprite2D" parent="."]
+texture_filter = 3
+rotation = 1.5708
+texture = ExtResource("2_nuo75")
+
+[node name="Range" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Range"]
+scale = Vector2(25, 25)
+shape = SubResource("CircleShape2D_7hf0y")
+
+[node name="Node" type="Node" parent="."]
+
+[connection signal="body_entered" from="Range" to="." method="_on_range_body_entered"]
+[connection signal="body_exited" from="Range" to="." method="_on_range_body_exited"]
