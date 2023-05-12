@@ -31,10 +31,7 @@ func turn():
 func fire():
 	readyBullet = false
 	enemy.on_hit(GameData.tower_data[type]["damage"])
-	print('fire')
-	print(GameData.tower_data[type]["rof"])
 	await get_tree().create_timer(GameData.tower_data[type]["rof"]).timeout
-	print('done')
 	readyBullet = true
 
 func _ready():
@@ -44,7 +41,6 @@ func _ready():
 
 func _on_range_body_entered(body):
 	enemy_array.append(body.get_parent())
-	print(enemy_array)
 
 
 func _on_range_body_exited(body):
