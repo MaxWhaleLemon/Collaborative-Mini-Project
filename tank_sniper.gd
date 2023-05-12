@@ -11,7 +11,7 @@ func _physics_process(_delta):
 	if  enemy_array.size() !=0 and built:
 		select_enemy()
 		turn()
-		if ready:
+		if readyBullet:
 			fire()
 	else:
 		enemy = null
@@ -31,8 +31,10 @@ func turn():
 func fire():
 	readyBullet = false
 	enemy.on_hit(GameData.tower_data[type]["damage"])
+	print('fire')
+	print(GameData.tower_data[type]["rof"])
 	await get_tree().create_timer(GameData.tower_data[type]["rof"]).timeout
-	
+	print('done')
 	readyBullet = true
 
 func _ready():
