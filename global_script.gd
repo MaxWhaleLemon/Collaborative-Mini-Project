@@ -6,8 +6,6 @@ var MaxHealth = 100
 var CurrentHealth = 100
 var HealthRegen = 0
 
-
-
 var SniperDMG = 20
 var FlameDMG = 1
 var TackDMG = 4
@@ -38,9 +36,51 @@ var Round = 1
 var Score = 0
 var Highscore = 0
 
-func _ready():
-	save_highscore()
 
+#The Algorithm Spot
+
+var Difficulty = 10
+var NormalEnemy = 0
+var StrongEnemy = 0
+var FastEnemy = 0
+
+
+
+
+var random_enemy = 0
+
+
+
+func _ready():
+	
+	
+	
+	
+	
+	while Difficulty >= 0:
+		var random_enemy = randi() % 3
+		
+		if random_enemy	== 0:
+			NormalEnemy = NormalEnemy + 1
+			Difficulty = Difficulty - 2
+			
+		elif random_enemy == 1:
+			StrongEnemy = StrongEnemy + 1
+			Difficulty = Difficulty - 4
+			
+		elif random_enemy == 2:
+			FastEnemy = FastEnemy + 1
+			Difficulty = Difficulty - 8
+		print(Difficulty)
+	
+	print("Wave:")
+	print(NormalEnemy)
+	print(StrongEnemy)
+	print(FastEnemy)
+		
+	
+	save_highscore()
+	print(random_enemy)
 
 func _process(_delta):
 	
