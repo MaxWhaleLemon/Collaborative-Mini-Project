@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cvm7xs0tjrbqf"]
+[gd_scene load_steps=7 format=3 uid="uid://cvm7xs0tjrbqf"]
 
 [ext_resource type="Script" path="res://Enemies/enemy_test.gd" id="1_td3uc"]
+[ext_resource type="PackedScene" uid="uid://bmylg7qwlfmkx" path="res://DeathParticle.tscn" id="2_hqy5e"]
 [ext_resource type="Texture2D" uid="uid://b2g0syd0b8x" path="res://Enemies/EmptyBar1.png" id="2_wy806"]
 [ext_resource type="Texture2D" uid="uid://b3lrf33ucf5qu" path="res://Enemies/FullBar.png" id="3_c5h1t"]
 
@@ -11,6 +12,29 @@ size = Vector2(44, 36)
 
 [node name="EnemyTest" type="PathFollow2D" groups=["enemy"]]
 script = ExtResource("1_td3uc")
+deathParticle = ExtResource("2_hqy5e")
+
+[node name="HealthRotation" type="Node2D" parent="."]
+rotation = -6.28319
+
+[node name="HealthBar" type="TextureProgressBar" parent="HealthRotation"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.0
+offset_top = 21.0
+offset_right = 9.0
+offset_bottom = 61.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+value = 100.0
+fill_mode = 4
+nine_patch_stretch = true
+texture_under = ExtResource("2_wy806")
+texture_progress = ExtResource("3_c5h1t")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 
@@ -22,23 +46,3 @@ texture = SubResource("CanvasTexture_4hc3k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("RectangleShape2D_3qc1m")
-
-[node name="DetectorFront" type="Marker2D" parent="CharacterBody2D"]
-position = Vector2(0, -37)
-
-[node name="DetectorLeft" type="Marker2D" parent="CharacterBody2D"]
-position = Vector2(-51, 0)
-
-[node name="DetectorRight" type="Marker2D" parent="CharacterBody2D"]
-position = Vector2(52, 0)
-
-[node name="HealthBar" type="TextureProgressBar" parent="."]
-offset_left = -20.0
-offset_top = 19.0
-offset_right = 20.0
-offset_bottom = 59.0
-value = 99.0
-fill_mode = 4
-nine_patch_stretch = true
-texture_under = ExtResource("2_wy806")
-texture_progress = ExtResource("3_c5h1t")

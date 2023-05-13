@@ -1,18 +1,18 @@
-extends Grid
+extends StaticBody2D
+
 
 var enemy = true
 var enemy_array = []
 var built = true
 var readyBullet = true
-var type = "TankSniper"
-var remaining_bullets = 2
+var type = "GreenTank"
 
 
 func _physics_process(_delta):
 	if  enemy_array.size() !=0 and built:
 		select_enemy()
 		turn()
-		if readyBullet:
+		if ready:
 			fire()
 	else:
 		enemy = null
@@ -27,26 +27,18 @@ func select_enemy():
 
 
 func turn():
-	get_node("Turret").look_at(enemy.global_position)
+	get_node("GreenGun").look_at(enemy.global_position)
 
 func fire():
-	if remaining_bullets > 0:
-		readyBullet = false
-		remaining_bullets = remaining_bullets - 1
-		print(remaining_bullets)
-		enemy.on_hit(GameData.tower_data[type]["damage"])
-		await get_tree().create_timer(GameData.tower_data[type]["rof"]).timeout
-		readyBullet = true
-	elif remaining_bullets <= 0:
-		pass
-
-func _ready():
-	if built:
-		self.get_node("Range/CollisionShape2D").get_shape().radius = 0.5 * GameData.tower_data[self.get_name()]["range"]
-
+	readyBullet = false
+	enemy.on_hit(GameData.tower_data[type]["damage"])
+	await get_tree().create_timer(GameData.tower_data[type]["rof"]).timeout
+	
+	readyBullet = true
 
 func _on_range_body_entered(body):
 	enemy_array.append(body.get_parent())
+	print(enemy_array)
 
 
 func _on_range_body_exited(body):

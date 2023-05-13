@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cnrk1uwqj5jsp"]
+
+[ext_resource type="Script" path="res://TankStorage/green_bullet.gd" id="1_688fx"]
+[ext_resource type="Texture2D" uid="uid://dd5me4jg6v4kb" path="res://TankStorage/GreenBullet.png" id="1_de574"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fho3d"]
+radius = 4.0
+height = 16.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qtdft"]
+radius = 6.0
+height = 20.0
+
+[node name="GreenBullet" type="CharacterBody2D"]
+script = ExtResource("1_688fx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_fho3d")
+
+[node name="Area2D" type="Area2D" parent="."]
+rotation = 1.5708
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_qtdft")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 3
+texture = ExtResource("1_de574")
