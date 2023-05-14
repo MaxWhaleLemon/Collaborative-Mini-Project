@@ -3,6 +3,8 @@ extends Node
 var map_node
 var current_wave = 0
 var enemies_in_wave = 0
+var build_valid = true
+var build_type
 
 func _ready():
 	map_node = get_node("ObstructionMap")
@@ -25,3 +27,9 @@ func spawn_enemies(wave_data):
 		var new_enemy = load("res://Enemies/" + i[0] + ".tscn").instantiate()
 		map_node.get_node("Path").add_child(new_enemy, true)
 		await(get_tree().create_timer(0.2).timeout)
+
+func verify_and_build():
+	if build_valid:
+		var new_tower = load("res://tank_sniper.tscn").instantiate()
+		new_tower.category = GameData.tower_data[build_type]["category"]
+		new_tower.type = build_type
