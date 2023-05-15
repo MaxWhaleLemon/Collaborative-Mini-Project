@@ -33,3 +33,6 @@ func verify_and_build():
 		var new_tower = load("res://tank_sniper.tscn").instantiate()
 		new_tower.category = GameData.tower_data[build_type]["category"]
 		new_tower.type = build_type
+		var new_tower_flame = load("res://flame_tower.tscn").instantiate()
+		new_tower_flame.category = GameData.tower_data[build_type]["category"]
+		new_tower_flame.type = build_type

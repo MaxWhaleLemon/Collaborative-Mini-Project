@@ -1,12 +1,36 @@
-[gd_scene load_steps=5 format=3 uid="uid://bdy0243ey6vgj"]
+[gd_scene load_steps=8 format=3 uid="uid://bdy0243ey6vgj"]
 
 [ext_resource type="Script" path="res://flame_tower.gd" id="1_gldhs"]
+[ext_resource type="Texture2D" uid="uid://bsyebipu5k6iy" path="res://towerDefense_tile296.png" id="2_wi8ia"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_dn4nl"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_salsi"]
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_j27rm"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_rucrg"]
+radius = 863.99
+
+[sub_resource type="Animation" id="Animation_wi2ts"]
+resource_name = "Fire"
+length = 0.1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Turret/Muzzle/MuzzleFlash:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o1ing"]
+_data = {
+"Fire": SubResource("Animation_wi2ts")
+}
 
 [node name="FlameTower" type="Node2D"]
 script = ExtResource("1_gldhs")
@@ -17,12 +41,33 @@ scale = Vector2(321.5, 189.5)
 texture = SubResource("CanvasTexture_dn4nl")
 
 [node name="Turret" type="Sprite2D" parent="."]
-modulate = Color(1, 0.121569, 0.0980392, 1)
-position = Vector2(153, 96)
-scale = Vector2(168.108, 119.029)
+self_modulate = Color(1, 0.0784314, 0, 1)
+position = Vector2(207, 89)
+rotation = -6.28319
+scale = Vector2(228.428, 119.029)
 texture = SubResource("CanvasTexture_salsi")
 
-[node name="Sprite2D" type="Sprite2D" parent="Turret"]
-position = Vector2(1.07669, 0.0168026)
-scale = Vector2(1.20904, 0.762419)
-texture = SubResource("CanvasTexture_j27rm")
+[node name="Flame" type="Marker2D" parent="Turret"]
+position = Vector2(0.560352, 1.78814e-07)
+scale = Vector2(0.735934, 1)
+
+[node name="ActualFlame" type="Sprite2D" parent="Turret/Flame"]
+position = Vector2(0.455025, 0)
+rotation = 1.5708
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("2_wi8ia")
+
+[node name="Range" type="Area2D" parent="."]
+position = Vector2(149, 85)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Range"]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_rucrg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Range")
+libraries = {
+"": SubResource("AnimationLibrary_o1ing")
+}
+
+[connection signal="body_entered" from="Range" to="." method="_on_range_body_entered"]
