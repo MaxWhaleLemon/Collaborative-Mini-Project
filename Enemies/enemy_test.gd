@@ -1,7 +1,7 @@
 extends PathFollow2D
 
 var speed = 150
-var hp  = 1000
+var hp  = 100
 @export var deathParticle : PackedScene
 
 @onready var health_bar = get_node("HealthRotation/HealthBar")
@@ -17,6 +17,7 @@ func _physics_process(_delta):
 	
 func move(_delta):
 	progress += 1
+	progress += 5
 	var enemy_rotation = (global_rotation)
 	health_rotation.set_rotation(-enemy_rotation)
 func on_hit(damage):
@@ -30,7 +31,9 @@ func on_destroy():
 	_particle.global_position = global_position
 	_particle.rotation = global_rotation
 	_particle.emitting = true
-	get_tree().current_scene.add_child(_particle)
+	get_tree().get_root().add_child(_particle)
 	self.queue_free()
+
+
 
 

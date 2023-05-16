@@ -40,7 +40,7 @@ curve = SubResource("Curve2D_8icq4")
 [node name="Tanks" type="Node2D" parent="."]
 
 [node name="TankSniper" parent="Tanks" instance=ExtResource("2_4oy3l")]
-position = Vector2(-232, -52)
+position = Vector2(-231, -52)
 scale = Vector2(0.200865, 0.196973)
 
 [node name="TackShooter" parent="Tanks" instance=ExtResource("3_ms1mf")]

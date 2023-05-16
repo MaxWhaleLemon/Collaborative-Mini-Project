@@ -18,7 +18,11 @@ func _physics_process(_delta):
 			fire()
 	else:
 		enemy = null
-
+	if enemy == null:
+		$Turret/Flame/ActualFlame.hide()
+	else:
+		$Turret/Flame/ActualFlame.show()
+		
 func select_enemy():
 	var enemy_progress_array = []
 	for i in enemy_array:
@@ -32,7 +36,6 @@ func select_enemy():
 
 
 func turn():
-	print("turnnningg ")
 	if enemy == null:
 		pass
 	else:
@@ -65,7 +68,6 @@ func _ready():
 	#	print(self.get_node("Range/CollisionShape2D").get_shape().radius)
 
 func _on_range_body_entered(body):
-	print("ENTER RANGE")
 	enemy_array.append(body.get_parent())
 
 
