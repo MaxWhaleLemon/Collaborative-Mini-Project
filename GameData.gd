@@ -14,6 +14,6 @@ var tower_data = {
 	"TackShooter": {
 		"damage": 20,
 		"rof": 2,
-		"range": 1050,
+		"range": 800,
 		"category": "Tack"}
 }

@@ -34,16 +34,19 @@ func fire_gun():
 	get_node("AnimationPlayer").play("Fire")
 
 func fire():
-	if remaining_bullets > 0:
-		category == "Sniper"
-		fire_gun()
-		readyBullet = false
-		remaining_bullets = remaining_bullets - 1
-		enemy.on_hit(GameData.tower_data[type]["damage"])
-		await get_tree().create_timer(GameData.tower_data[type]["rof"]).timeout
-		readyBullet = true
-	elif remaining_bullets <= 0:
-		pass
+	if enemy == null:
+		return
+	else:
+		if remaining_bullets > 0:
+			category == "Tack"
+			fire_gun()
+			readyBullet = false
+			remaining_bullets = remaining_bullets - 1
+			enemy.on_hit(GameData.tower_data[type]["damage"])
+			await get_tree().create_timer(GameData.tower_data[type]["rof"]).timeout
+			readyBullet = true
+		elif remaining_bullets <= 0:
+			pass
 
 func _ready():
 	if built:

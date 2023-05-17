@@ -10,7 +10,6 @@ var category
 
 
 func _physics_process(_delta):
-	#print(enemy_array.size() )
 	if  enemy_array.size() !=0 and built:
 		select_enemy()
 		turn()
