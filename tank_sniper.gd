@@ -5,7 +5,8 @@ var enemy_array = []
 var built = true
 var readyBullet = true
 var type = "TankSniper"
-var remaining_bullets = 2
+var remaining_bullets = 4
+var category
 
 
 func _physics_process(_delta):
@@ -29,11 +30,15 @@ func select_enemy():
 func turn():
 	get_node("Turret").look_at(enemy.global_position)
 
+func fire_gun():
+	get_node("AnimationPlayer").play("Fire")
+
 func fire():
 	if remaining_bullets > 0:
+		category == "Sniper"
+		fire_gun()
 		readyBullet = false
 		remaining_bullets = remaining_bullets - 1
-		print(remaining_bullets)
 		enemy.on_hit(GameData.tower_data[type]["damage"])
 		await get_tree().create_timer(GameData.tower_data[type]["rof"]).timeout
 		readyBullet = true
@@ -43,7 +48,6 @@ func fire():
 func _ready():
 	if built:
 		self.get_node("Range/CollisionShape2D").get_shape().radius = 0.5 * GameData.tower_data[self.get_name()]["range"]
-
 
 func _on_range_body_entered(body):
 	enemy_array.append(body.get_parent())
