@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://wmh8solo7ipb"]
 
 [ext_resource type="Script" path="res://Enemies/enemy_test_fast.gd" id="1_qqodd"]
-[ext_resource type="Texture2D" uid="uid://b2g0syd0b8x" path="res://Enemies/EmptyBar1.png" id="2_ulp1n"]
-[ext_resource type="Texture2D" uid="uid://b3lrf33ucf5qu" path="res://Enemies/FullBar.png" id="3_hap1m"]
+[ext_resource type="Texture2D" uid="uid://im6udrtl3mhu" path="res://Enemies/healthbar empty.png" id="2_g27jn"]
+[ext_resource type="Texture2D" uid="uid://c6bxrf22j4kt6" path="res://Enemies/healthbar full.png" id="3_jn4r8"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_4hc3k"]
 
@@ -31,8 +31,8 @@ scale = Vector2(1.5, 1.5)
 value = 100.0
 fill_mode = 4
 nine_patch_stretch = true
-texture_under = ExtResource("2_ulp1n")
-texture_progress = ExtResource("3_hap1m")
+texture_under = ExtResource("2_g27jn")
+texture_progress = ExtResource("3_jn4r8")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 

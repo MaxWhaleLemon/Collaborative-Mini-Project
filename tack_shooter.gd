@@ -6,6 +6,7 @@ var built = true
 var readyBullet = true
 var type = "TackShooter"
 var remaining_bullets = 4
+var max_bullets = 4
 var category
 var bullet_scene = preload("res://bullet.tscn")
 
@@ -18,6 +19,8 @@ func _physics_process(_delta):
 			fire()
 	else:
 		enemy = null
+	$AmmoBar.value = remaining_bullets
+	$AmmoBar.max_value = max_bullets
 
 func select_enemy():
 	var enemy_progress_array = []

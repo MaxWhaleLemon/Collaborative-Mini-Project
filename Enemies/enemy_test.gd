@@ -32,6 +32,7 @@ func on_destroy():
 	_particle.rotation = global_rotation
 	_particle.emitting = true
 	get_tree().get_root().add_child(_particle)
+	GlobalScript.WaveCounter = GlobalScript.WaveCounter - 1
 	self.queue_free()
 
 

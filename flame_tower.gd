@@ -5,7 +5,8 @@ var enemy_array = []
 var built = true
 var readyBullet = true
 var type = "FlameTower"
-var remaining_bullets = 10000
+var remaining_bullets = 100
+var max_bullets = 100
 var category
 
 
@@ -21,7 +22,8 @@ func _physics_process(_delta):
 		$Turret/Flame/ActualFlame.hide()
 	else:
 		$Turret/Flame/ActualFlame.show()
-		
+	$AmmoBar.value = remaining_bullets
+	$AmmoBar.max_value = max_bullets
 func select_enemy():
 	var enemy_progress_array = []
 	for i in enemy_array:
