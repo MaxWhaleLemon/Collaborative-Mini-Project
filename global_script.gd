@@ -43,50 +43,23 @@ var Difficulty = 10
 var NormalEnemy = 0
 var StrongEnemy = 0
 var FastEnemy = 0
+var WaveCounter = 0
 
 
 
 
-var random_enemy = 0
 
-
-
-func _ready():
-	
-	
-	
-	
-	
-	while Difficulty >= 0:
-		var random_enemy = randi() % 3
-		
-		if random_enemy	== 0:
-			NormalEnemy = NormalEnemy + 1
-			Difficulty = Difficulty - 2
-			
-		elif random_enemy == 1:
-			StrongEnemy = StrongEnemy + 1
-			Difficulty = Difficulty - 4
-			
-		elif random_enemy == 2:
-			FastEnemy = FastEnemy + 1
-			Difficulty = Difficulty - 8
-		print(Difficulty)
-	
-	print("Wave:")
-	print(NormalEnemy)
-	print(StrongEnemy)
-	print(FastEnemy)
-		
+func _ready():		
 	
 	save_highscore()
-	print(random_enemy)
 
 func _process(_delta):
 	
 	if Score > Highscore:
 		Highscore = Score
 
+	if CurrentHealth <= 0:
+		get_tree().change_scene_to_file("res://scene_handler_main.tscn")
 
 
 

@@ -5,7 +5,7 @@ var enemy_array = []
 var built = true
 var readyBullet = true
 var type = "TankSniper"
-var remaining_bullets = 2
+var remaining_bullets = 100
 
 
 func _physics_process(_delta):
