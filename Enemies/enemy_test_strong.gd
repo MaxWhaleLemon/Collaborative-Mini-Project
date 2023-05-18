@@ -28,11 +28,11 @@ func on_hit(damage):
 		on_destroy()
 
 func on_destroy():
-	#var _particle = deathParticle.instantiate()
-	#_particle.position = global_position
-	#_particle.rotation = global_rotation
-	#_particle.emitting = true
-	#get_tree().current_scene.add_child(_particle)
+	var _particle = deathParticle.instantiate()
+	_particle.global_position = global_position
+	_particle.rotation = global_rotation
+	_particle.emitting = true
+	get_tree().get_root().add_child(_particle)
 	GlobalScript.WaveCounter = GlobalScript.WaveCounter - 1
 	self.queue_free()
 

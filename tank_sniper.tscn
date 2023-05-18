@@ -2,13 +2,11 @@
 
 [ext_resource type="Script" path="res://tank_sniper.gd" id="1_3dy0k"]
 [ext_resource type="Script" path="res://Turret.gd" id="1_6y0pi"]
+[ext_resource type="Texture2D" uid="uid://cfkexshvd47mp" path="res://towerDefense_tile181.png" id="2_3kqph"]
 [ext_resource type="Texture2D" uid="uid://bpk6f2qpq1ygt" path="res://towerDefense_tile297.png" id="3_oftyf"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_08vr7"]
+[ext_resource type="Texture2D" uid="uid://cdkqmo7x4ef4x" path="res://towerDefense_tile249.png" id="3_y2u6c"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5rso6"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_k5nmw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_irsal"]
 radius = 863.99
@@ -40,25 +38,25 @@ script = ExtResource("1_3dy0k")
 
 [node name="Base" type="Sprite2D" parent="."]
 position = Vector2(160.25, 94.25)
-scale = Vector2(321.5, 189.5)
-texture = SubResource("CanvasTexture_08vr7")
+scale = Vector2(5, 5)
+texture = ExtResource("2_3kqph")
 
 [node name="Turret" type="Sprite2D" parent="."]
 self_modulate = Color(0, 1, 1, 1)
 material = SubResource("CanvasItemMaterial_5rso6")
-position = Vector2(119, 94)
-scale = Vector2(270, 130)
-texture = SubResource("CanvasTexture_k5nmw")
+position = Vector2(156, 91)
+scale = Vector2(5, 5)
+texture = ExtResource("3_y2u6c")
 offset = Vector2(0.5, 0)
 script = ExtResource("1_6y0pi")
 
 [node name="Muzzle" type="Marker2D" parent="Turret"]
-position = Vector2(1.11179, -0.058823)
+position = Vector2(34, -0.8)
 
 [node name="MuzzleFlash" type="Sprite2D" parent="Turret/Muzzle"]
-position = Vector2(0.348614, 0.00766754)
+position = Vector2(26, 0.199997)
 rotation = 1.5708
-scale = Vector2(0.04, 0.02)
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("3_oftyf")
 
 [node name="Range" type="Area2D" parent="."]

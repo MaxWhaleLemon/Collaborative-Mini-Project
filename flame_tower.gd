@@ -22,6 +22,9 @@ func _physics_process(_delta):
 		$Turret/Flame/ActualFlame.hide()
 	else:
 		$Turret/Flame/ActualFlame.show()
+	if remaining_bullets <= 0:
+			$Turret/Flame/ActualFlame.hide()
+		
 	$AmmoBar.value = remaining_bullets
 	$AmmoBar.max_value = max_bullets
 func select_enemy():
@@ -57,8 +60,6 @@ func fire():
 			enemy.on_hit(GameData.tower_data[type]["damage"])
 			await get_tree().create_timer(GameData.tower_data[type]["rof"]).timeout
 			readyBullet = true
-		elif remaining_bullets <= 0:
-			pass
 
 func _ready():
 	pass

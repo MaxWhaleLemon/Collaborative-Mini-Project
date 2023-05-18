@@ -16,8 +16,7 @@ func _physics_process(_delta):
 	move(_delta)
 	
 func move(_delta):
-	progress += 1
-	progress += 5
+	progress += 2
 	var enemy_rotation = (global_rotation)
 	health_rotation.set_rotation(-enemy_rotation)
 func on_hit(damage):

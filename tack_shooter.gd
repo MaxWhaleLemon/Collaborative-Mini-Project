@@ -5,8 +5,8 @@ var enemy_array = []
 var built = true
 var readyBullet = true
 var type = "TackShooter"
-var remaining_bullets = 4
-var max_bullets = 4
+var remaining_bullets = 8
+var max_bullets = 8
 var category
 var bullet_scene = preload("res://bullet.tscn")
 
