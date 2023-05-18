@@ -36,6 +36,7 @@ _data = {
 }
 
 [node name="TankSniper" type="Node2D"]
+z_index = 10
 script = ExtResource("1_3dy0k")
 
 [node name="Base" type="Sprite2D" parent="."]
