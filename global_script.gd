@@ -2,39 +2,54 @@ extends Node
 
 var SAVE_FILE_PATH = "user://savedata.save"
 
-var MaxHealth = 100
-var CurrentHealth = 100
-var HealthRegen = 0
+var MaxHealth = 10
+var CurrentHealth = 10
+var HealthRegen = 1
 
 var SniperDMG = 20
 var FlameDMG = 1
 var TackDMG = 4
+var SiloDMG = 4
 
 var SniperMaxAMMO = 5
 var FlameMaxAMMO = 50
 var TackMaxAMMO = 25
+var SiloMaxAMMO = 25
 
 var SniperCurrentAMMO = 5
 var FlameCurrentAMMO = 50
 var TackCurrentAMMO = 25
+var SiloCurrentAMMO = 25
 
 var SniperSPEED = 1
 var FlameSPEED = 10
 var TackSPEED = 5
+var SiloSPEED = 5
 
 var SniperREGEN = 1
 var FlameREGEN = 1
 var TackREGEN = 1
+var SiloREGEN = 1
 
 var SniperRANGE = 1
 var FlameRANGE = 1
 var TackRANGE = 1
+var SiloRANGE = 1
 
+var SniperMaxAMOUNT = 1
+var FlameMaxAMOUNT = 1
+var TackMaxAMOUNT = 1
+var SiloMaxAMOUNT = 1
 
+var SniperCurrentAMOUNT = 0
+var FlameCurrentAMOUNT = 0
+var TackCurrentAMOUNT = 0
+var SiloCurrentAMOUNT = 0
 
 var Round = 1
 var Score = 0
 var Highscore = 0
+
 
 
 #The Algorithm Spot

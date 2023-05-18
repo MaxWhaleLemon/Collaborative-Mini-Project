@@ -76,7 +76,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("2_vjhjc")
 theme_override_font_sizes/font_size = 50
-text = "STAR SHOOTER
+text = "SPUD SHOOTER
 "
 
 [node name="FlameThrowerSelect" type="Button" parent="HBoxContainer/InfoBarLeft/BoxContainer"]
@@ -93,6 +93,13 @@ size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("2_vjhjc")
 theme_override_font_sizes/font_size = 50
 text = "SNIPER"
+
+[node name="SiloSelect" type="Button" parent="HBoxContainer/InfoBarLeft/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_vjhjc")
+theme_override_font_sizes/font_size = 50
+text = "ROCKET SILO"
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
 custom_minimum_size = Vector2(600, 0)
@@ -131,7 +138,8 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_styles/background = SubResource("StyleBoxFlat_q1oep")
 theme_override_styles/fill = SubResource("StyleBoxFlat_u33kc")
-value = 39.0
+max_value = 20.0
+value = 20.0
 rounded = true
 fill_mode = 3
 show_percentage = false
@@ -142,6 +150,6 @@ custom_minimum_size = Vector2(60, 300)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_vjhjc")
 theme_override_font_sizes/font_size = 100
-text = "100"
+text = "20"
 horizontal_alignment = 1
 vertical_alignment = 1

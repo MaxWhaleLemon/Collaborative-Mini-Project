@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://donoo0t60ymsw"]
+
+[ext_resource type="FontFile" uid="uid://dkiu3auiayguu" path="res://VCR_OSD_MONO_1.001.ttf" id="1_m8qfq"]
+
+[node name="TACK_AMMO_UP" type="Node"]
+
+[node name="Upgrade_Button" type="Button" parent="."]
+custom_minimum_size = Vector2(0, 100)
+size_flags_stretch_ratio = 0.0
+theme_override_fonts/font = ExtResource("1_m8qfq")
+theme_override_font_sizes/font_size = 70
+text = "TACK AMMO UP"
