@@ -5,12 +5,12 @@ var enemy_array = []
 var built = true
 var readyBullet = true
 var type = "FlameTower"
-var remaining_bullets = 10000
+var remaining_bullets = 100
+var max_bullets = 100
 var category
 
 
 func _physics_process(_delta):
-	#print(enemy_array.size() )
 	if  enemy_array.size() !=0 and built:
 		select_enemy()
 		turn()
@@ -22,7 +22,11 @@ func _physics_process(_delta):
 		$Turret/Flame/ActualFlame.hide()
 	else:
 		$Turret/Flame/ActualFlame.show()
+	if remaining_bullets <= 0:
+			$Turret/Flame/ActualFlame.hide()
 		
+	$AmmoBar.value = remaining_bullets
+	$AmmoBar.max_value = max_bullets
 func select_enemy():
 	var enemy_progress_array = []
 	for i in enemy_array:
@@ -56,8 +60,6 @@ func fire():
 			enemy.on_hit(GameData.tower_data[type]["damage"])
 			await get_tree().create_timer(GameData.tower_data[type]["rof"]).timeout
 			readyBullet = true
-		elif remaining_bullets <= 0:
-			pass
 
 func _ready():
 	pass

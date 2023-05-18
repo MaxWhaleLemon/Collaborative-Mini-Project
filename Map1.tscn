@@ -44,7 +44,7 @@ position = Vector2(-231, -52)
 scale = Vector2(0.200865, 0.196973)
 
 [node name="TackShooter" parent="Tanks" instance=ExtResource("3_ms1mf")]
-position = Vector2(7, -111)
+position = Vector2(-4, 175)
 scale = Vector2(0.2, 0.2)
 
 [node name="FlameTower" parent="Tanks" instance=ExtResource("4_83jji")]

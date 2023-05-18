@@ -1,11 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://bdy0243ey6vgj"]
 
 [ext_resource type="Script" path="res://flame_tower.gd" id="1_gldhs"]
+[ext_resource type="Texture2D" uid="uid://dwmth1sc1chon" path="res://towerDefense_tile180.png" id="2_26n10"]
 [ext_resource type="Texture2D" uid="uid://bsyebipu5k6iy" path="res://towerDefense_tile296.png" id="2_wi8ia"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_dn4nl"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_salsi"]
+[ext_resource type="Texture2D" uid="uid://mqh76cefxj6" path="res://towerDefense_tile250.png" id="3_feejp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rucrg"]
 radius = 863.99
@@ -37,24 +35,23 @@ script = ExtResource("1_gldhs")
 
 [node name="Base" type="Sprite2D" parent="."]
 position = Vector2(160.25, 94.25)
-scale = Vector2(321.5, 189.5)
-texture = SubResource("CanvasTexture_dn4nl")
+scale = Vector2(5, 5)
+texture = ExtResource("2_26n10")
 
 [node name="Turret" type="Sprite2D" parent="."]
-self_modulate = Color(1, 0.0784314, 0, 1)
 position = Vector2(207, 89)
 rotation = -6.28319
-scale = Vector2(228.428, 119.029)
-texture = SubResource("CanvasTexture_salsi")
+scale = Vector2(5, 5)
+texture = ExtResource("3_feejp")
 
 [node name="Flame" type="Marker2D" parent="Turret"]
-position = Vector2(0.560352, 1.78814e-07)
+position = Vector2(33.2, -0.599888)
 scale = Vector2(0.735934, 1)
 
 [node name="ActualFlame" type="Sprite2D" parent="Turret/Flame"]
-position = Vector2(1.00942, 0.00595856)
+position = Vector2(37.683, 0.471886)
 rotation = 1.5708
-scale = Vector2(0.05, 0.06)
+scale = Vector2(1, 2.5)
 texture = ExtResource("2_wi8ia")
 
 [node name="Range" type="Area2D" parent="."]
@@ -68,6 +65,15 @@ shape = SubResource("CircleShape2D_rucrg")
 libraries = {
 "": SubResource("AnimationLibrary_o1ing")
 }
+
+[node name="AmmoBar" type="ProgressBar" parent="."]
+modulate = Color(0.505882, 0.811765, 0.403922, 1)
+custom_minimum_size = Vector2(300, 50)
+offset_left = 10.0
+offset_top = -58.0
+offset_right = 310.0
+offset_bottom = -8.0
+show_percentage = false
 
 [connection signal="body_entered" from="Range" to="." method="_on_range_body_entered"]
 [connection signal="body_exited" from="Range" to="." method="_on_range_body_exited"]

@@ -6,6 +6,7 @@ var built = true
 var readyBullet = true
 var type = "TankSniper"
 var remaining_bullets = 4
+var max_bullets = 4
 var category
 
 
@@ -17,6 +18,8 @@ func _physics_process(_delta):
 			fire()
 	else:
 		enemy = null
+	$AmmoBar.value = remaining_bullets
+	$AmmoBar.max_value = max_bullets
 
 func select_enemy():
 	var enemy_progress_array = []
@@ -34,16 +37,19 @@ func fire_gun():
 	get_node("AnimationPlayer").play("Fire")
 
 func fire():
-	if remaining_bullets > 0:
-		category == "Sniper"
-		fire_gun()
-		readyBullet = false
-		remaining_bullets = remaining_bullets - 1
-		enemy.on_hit(GameData.tower_data[type]["damage"])
-		await get_tree().create_timer(GameData.tower_data[type]["rof"]).timeout
-		readyBullet = true
-	elif remaining_bullets <= 0:
-		pass
+	if enemy == null:
+		return
+	else:
+		if remaining_bullets > 0:
+			category == "Tack"
+			fire_gun()
+			readyBullet = false
+			remaining_bullets = remaining_bullets - 1
+			enemy.on_hit(GameData.tower_data[type]["damage"])
+			await get_tree().create_timer(GameData.tower_data[type]["rof"]).timeout
+			readyBullet = true
+		elif remaining_bullets <= 0:
+			pass
 
 func _ready():
 	if built:

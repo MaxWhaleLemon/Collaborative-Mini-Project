@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjccgbcp6ojjq"]
+
+[ext_resource type="Script" path="res://bullet.gd" id="1_26yun"]
+[ext_resource type="Texture2D" uid="uid://djygwbogs23vf" path="res://Enemies/towerDefense_tile273.png" id="2_lpuxv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_566qw"]
+size = Vector2(18, 18)
+
+[node name="bullet" type="Area2D"]
+script = ExtResource("1_26yun")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_lpuxv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_566qw")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+visible = false
+position = Vector2(0, -2.38419e-07)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
