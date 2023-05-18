@@ -71,7 +71,7 @@ func spawn_enemies(wave_data):
 	for i in wave_data:
 		var new_enemy = load("res://Enemies/" + i[0] + ".tscn").instantiate()
 		map_node.get_node("Path").add_child(new_enemy, true)
-		await(get_tree().create_timer(0.5).timeout)
+		await(get_tree().create_timer(1).timeout)
 
 func verify_and_build():
 	if build_valid:
