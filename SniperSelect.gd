@@ -1,9 +1,9 @@
 extends Button
 
 @onready var tank = preload("res://tank_sniper.tscn")
-var sniperCount = 0
+var sniperCount = GlobalScript.SniperCurrentAMOUNT
 var currTile
-var sniperMax = 3
+var sniperMax = GlobalScript.SniperMaxAMOUNT
 #var mouse_tile = Vector2i(local_to_map(get_global_mouse_position()))
 #var tile_center_pos = map_to_world(tile_pos) + cell_size / 2
 var SniperActive = false
@@ -46,7 +46,7 @@ func _input(event):
 #					get_child(0).get_node("Area").modulate = Color(255,255,255)
 		elif event is InputEventMouseButton and event.button_mask == 0 and SniperActive == true:
 			#button left release
-			sniperCount = sniperCount + 1
+			GlobalScript.SniperCurrentAMOUNT = sniperCount + 1
 			if event.global_position.x <= 200:
 				if get_child_count() > 1:
 					get_child(0).queue_free()
