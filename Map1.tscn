@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://cbonfwkwmq331"]
+[gd_scene load_steps=11 format=3 uid="uid://cbonfwkwmq331"]
 
 [ext_resource type="Script" path="res://GameScene.gd" id="1_2obbm"]
 [ext_resource type="PackedScene" uid="uid://cfqaj6af2oybw" path="res://tank_sniper.tscn" id="2_4oy3l"]
 [ext_resource type="TileSet" uid="uid://dojcsesno7sh2" path="res://TileTest.tres" id="2_t6ek3"]
 [ext_resource type="PackedScene" uid="uid://dafprxubj1sn6" path="res://tack_shooter.tscn" id="3_ms1mf"]
 [ext_resource type="PackedScene" uid="uid://bdy0243ey6vgj" path="res://flame_tower.tscn" id="4_83jji"]
+[ext_resource type="PackedScene" uid="uid://bvt15mdxkb2ke" path="res://revolverTank.tscn" id="5_2qvs4"]
 [ext_resource type="Texture2D" uid="uid://d1aiaytnd22fu" path="res://endoftrack.png" id="7_0wgqq"]
 [ext_resource type="Script" path="res://Endoftrack.gd" id="8_34dr2"]
 
@@ -40,11 +41,15 @@ curve = SubResource("Curve2D_8icq4")
 [node name="Tanks" type="Node2D" parent="."]
 
 [node name="TankSniper" parent="Tanks" instance=ExtResource("2_4oy3l")]
-position = Vector2(-231, -52)
+position = Vector2(92, -23)
 scale = Vector2(0.200865, 0.196973)
 
 [node name="TackShooter" parent="Tanks" instance=ExtResource("3_ms1mf")]
 position = Vector2(-4, 175)
+scale = Vector2(0.2, 0.2)
+
+[node name="Revolver" parent="Tanks" instance=ExtResource("5_2qvs4")]
+position = Vector2(-219, -25.9999)
 scale = Vector2(0.2, 0.2)
 
 [node name="FlameTower" parent="Tanks" instance=ExtResource("4_83jji")]

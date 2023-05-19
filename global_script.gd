@@ -54,7 +54,7 @@ var Highscore = 0
 
 #The Algorithm Spot
 
-var Difficulty = 75
+var Difficulty = 200
 var NormalEnemy = 0
 var StrongEnemy = 0
 var FastEnemy = 0

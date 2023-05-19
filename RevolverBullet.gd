@@ -2,7 +2,7 @@ extends Area2D
 
 var direction = Vector2.RIGHT
 var speed = 400
-var type = "TackShooter"
+var type = "Revolver"
 
 
 func _process(delta):
@@ -10,8 +10,8 @@ func _process(delta):
 
 
 func _on_body_entered(body):
-	print("collision")
-	print(body)
+	if body.name == "CharacterBody2D":
+		print("CharacterBody")
 	var enemy = body.get_parent()
 	enemy.on_hit(GameData.tower_data[type]["damage"])
 	queue_free()

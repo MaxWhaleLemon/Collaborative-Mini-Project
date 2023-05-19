@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3g22jkqfynfu"]
+
+[ext_resource type="Script" path="res://bullet.gd" id="1_y4e6h"]
+[ext_resource type="Texture2D" uid="uid://bxgpq5l0objmk" path="res://towerDefense_tile252.png" id="2_1qk23"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_566qw"]
+size = Vector2(18, 18)
+
+[node name="Revolverbullet" type="Area2D"]
+script = ExtResource("1_y4e6h")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_1qk23")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_566qw")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+visible = false
+position = Vector2(0, -2.38419e-07)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered" flags=18]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited" flags=18]
