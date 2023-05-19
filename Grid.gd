@@ -2,7 +2,7 @@ class_name Grid
 extends Node2D
 
 # Size in rows and columns
-@export var size := Vector2(15, 15)
+@export var size := Vector2(17, 17)
 # tile size
 @export var tile_size := Vector2(32, 32)
 
