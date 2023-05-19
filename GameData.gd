@@ -15,5 +15,10 @@ var tower_data = {
 		"damage": 10,
 		"rof": 1,
 		"range": 800,
-		"category": "Tack"}
+		"category": "Tack"},
+	"Revolver": {
+		"damage": 100,
+		"rof": 1,
+		"range": 800,
+		"category": "Spray"}
 }
