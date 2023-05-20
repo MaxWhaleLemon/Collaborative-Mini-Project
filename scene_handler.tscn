@@ -106,6 +106,7 @@ theme_override_fonts/font = ExtResource("2_vjhjc")
 theme_override_font_sizes/font_size = 50
 text = "ROCKET SILO"
 
+<<<<<<< Updated upstream
 [node name="ColorRect" type="ColorRect" parent="HBoxContainer/InfoBarLeft"]
 layout_mode = 1
 anchors_preset = -1
@@ -134,6 +135,50 @@ modulate = Color(0.352941, 0.352941, 0.352941, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HBoxContainer/InfoBarLeft/ColorRect/Label/Area2D"]
 position = Vector2(176, 100)
 shape = SubResource("RectangleShape2D_ldbig")
+=======
+[node name="Label" type="Label" parent="HBoxContainer/InfoBarLeft/BoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_vjhjc")
+theme_override_font_sizes/font_size = 40
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/InfoBarLeft/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="HBoxContainer/InfoBarLeft/BoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_vjhjc")
+theme_override_font_sizes/font_size = 40
+text = "SCORE: "
+
+[node name="PlayerScore" type="Label" parent="HBoxContainer/InfoBarLeft/BoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_vjhjc")
+theme_override_font_sizes/font_size = 40
+text = "100"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/InfoBarLeft/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="HBoxContainer/InfoBarLeft/BoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_vjhjc")
+theme_override_font_sizes/font_size = 40
+text = "ENEMIES: "
+
+[node name="EnemyCount" type="Label" parent="HBoxContainer/InfoBarLeft/BoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_vjhjc")
+theme_override_font_sizes/font_size = 40
+text = "100"
+>>>>>>> Stashed changes
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
 custom_minimum_size = Vector2(600, 0)

@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://wpujsy21q1em"]
+[gd_scene load_steps=2 format=3 uid="uid://wpujsy21q1em"]
 
-[ext_resource type="PackedScene" uid="uid://bl5eg6gc1lo0q" path="res://upgrades.tscn" id="1_5fewi"]
 [ext_resource type="Script" path="res://scene_handler_upgrades.gd" id="1_ijm77"]
 
 [node name="scene_handler_upgrades" type="Node"]
 script = ExtResource("1_ijm77")
 
-[node name="Upgrades" parent="." instance=ExtResource("1_5fewi")]
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(0, 2001.28)

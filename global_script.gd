@@ -36,16 +36,6 @@ var FlameRANGE = 1
 var TackRANGE = 1
 var SiloRANGE = 1
 
-var SniperMaxAMOUNT = 1
-var FlameMaxAMOUNT = 1
-var TackMaxAMOUNT = 1
-var SiloMaxAMOUNT = 1
-
-var SniperCurrentAMOUNT = 0
-var FlameCurrentAMOUNT = 0
-var TackCurrentAMOUNT = 0
-var SiloCurrentAMOUNT = 0
-
 var Round = 1
 var Score = 0
 var Highscore = 0
@@ -54,7 +44,7 @@ var Highscore = 0
 
 #The Algorithm Spot
 
-var Difficulty = 200
+var Difficulty = 10
 var NormalEnemy = 0
 var StrongEnemy = 0
 var FastEnemy = 0
@@ -74,7 +64,7 @@ func _process(_delta):
 		Highscore = Score
 
 	if CurrentHealth <= 0:
-		get_tree().change_scene_to_file("res://scene_handler_main.tscn")
+		get_tree().change_scene_to_file("res://scene_handler_end.tscn")
 
 
 

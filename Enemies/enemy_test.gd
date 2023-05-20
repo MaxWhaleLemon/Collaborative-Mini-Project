@@ -16,7 +16,7 @@ func _physics_process(_delta):
 	move(_delta)
 	
 func move(_delta):
-	progress += 2
+	progress += 3
 	var enemy_rotation = (global_rotation)
 	health_rotation.set_rotation(-enemy_rotation)
 func on_hit(damage):
@@ -32,6 +32,7 @@ func on_destroy():
 	_particle.emitting = true
 	get_tree().get_root().add_child(_particle)
 	GlobalScript.WaveCounter = GlobalScript.WaveCounter - 1
+	GlobalScript.Score = GlobalScript.Score + 10
 	self.queue_free()
 
 

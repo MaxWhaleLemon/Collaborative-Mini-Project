@@ -13,22 +13,28 @@ func _physics_process(delta):
 		GlobalScript.CurrentHealth = GlobalScript.CurrentHealth + GlobalScript.HealthRegen
 
 func _ready():
+	
+	
 	while GlobalScript.Difficulty >= 0:
 		var random_enemy = randi() % 3
-		GlobalScript.WaveCounter = GlobalScript.WaveCounter + 1
+		
 		
 		if random_enemy == 0:
 			GlobalScript.NormalEnemy = GlobalScript.NormalEnemy + 1
 			GlobalScript.Difficulty = GlobalScript.Difficulty - 2
+			GlobalScript.WaveCounter = GlobalScript.WaveCounter + 1
 
 		elif random_enemy == 1:
 			GlobalScript.StrongEnemy = GlobalScript.StrongEnemy + 1
 			GlobalScript.Difficulty = GlobalScript.Difficulty - 4
+			GlobalScript.WaveCounter = GlobalScript.WaveCounter + 1
 
 		elif random_enemy == 2:
 			GlobalScript.FastEnemy = GlobalScript.FastEnemy + 1
 			GlobalScript.Difficulty = GlobalScript.Difficulty - 8
+			GlobalScript.WaveCounter = GlobalScript.WaveCounter + 1
 		print(GlobalScript.Difficulty)
+
 
 
 	if GlobalScript.Difficulty <= 0:
@@ -71,7 +77,7 @@ func spawn_enemies(wave_data):
 	for i in wave_data:
 		var new_enemy = load("res://Enemies/" + i[0] + ".tscn").instantiate()
 		map_node.get_node("Path").add_child(new_enemy, true)
-		await(get_tree().create_timer(1).timeout)
+		await(get_tree().create_timer(0.3).timeout)
 
 func verify_and_build():
 	if build_valid:

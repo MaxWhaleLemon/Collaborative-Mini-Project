@@ -1,12 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://dumpq6dv6ihdn"]
+[gd_scene load_steps=3 format=3 uid="uid://dumpq6dv6ihdn"]
 
+[ext_resource type="Script" path="res://upgrade scenes/flame_ammo_up.gd" id="1_0ri6v"]
 [ext_resource type="FontFile" uid="uid://dkiu3auiayguu" path="res://VCR_OSD_MONO_1.001.ttf" id="1_dk3py"]
 
 [node name="FLAME_AMMO_UP" type="Node"]
+script = ExtResource("1_0ri6v")
 
 [node name="Upgrade_Button" type="Button" parent="."]
 custom_minimum_size = Vector2(0, 100)
+offset_right = 541.0
+offset_bottom = 100.0
 size_flags_stretch_ratio = 0.0
 theme_override_fonts/font = ExtResource("1_dk3py")
 theme_override_font_sizes/font_size = 70
 text = "FLAME AMMO UP"
+
+[connection signal="pressed" from="Upgrade_Button" to="." method="_on_upgrade_button_pressed"]

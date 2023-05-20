@@ -6,6 +6,8 @@
 
 [node name="Upgrade_Button" type="Button" parent="."]
 custom_minimum_size = Vector2(0, 100)
+offset_right = 377.0
+offset_bottom = 100.0
 size_flags_stretch_ratio = 0.0
 theme_override_fonts/font = ExtResource("1_geqaj")
 theme_override_font_sizes/font_size = 70
