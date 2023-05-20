@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cfqaj6af2oybw"]
+[gd_scene load_steps=11 format=3 uid="uid://cfqaj6af2oybw"]
 
 [ext_resource type="Script" path="res://tank_sniper.gd" id="1_3dy0k"]
 [ext_resource type="Script" path="res://Turret.gd" id="1_6y0pi"]
@@ -32,6 +32,9 @@ tracks/0/keys = {
 _data = {
 "Fire": SubResource("Animation_wi2ts")
 }
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uvbyp"]
+size = Vector2(224, 228)
 
 [node name="TankSniper" type="Node2D"]
 z_index = 10
@@ -81,6 +84,12 @@ offset_right = 160.5
 offset_bottom = -93.0
 show_percentage = false
 metadata/_edit_use_anchors_ = true
+
+[node name="BaseArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BaseArea"]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_uvbyp")
 
 [connection signal="body_entered" from="Range" to="." method="_on_range_body_entered"]
 [connection signal="body_exited" from="Range" to="." method="_on_range_body_exited"]
