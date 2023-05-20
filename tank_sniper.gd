@@ -5,8 +5,8 @@ var enemy_array = []
 var built = true
 var readyBullet = true
 var type = "TankSniper"
-var remaining_bullets = 4
-var max_bullets = 4
+var remaining_bullets = 6
+var max_bullets = 6
 var category
 
 
@@ -18,6 +18,10 @@ func _physics_process(_delta):
 			fire()
 	else:
 		enemy = null
+	if enemy == null:
+		$Turret/Muzzle/MuzzleFlash.hide()
+	if remaining_bullets <= 0:
+			$Turret/Muzzle/MuzzleFlash.hide()
 	$AmmoBar.value = remaining_bullets
 	$AmmoBar.max_value = max_bullets
 

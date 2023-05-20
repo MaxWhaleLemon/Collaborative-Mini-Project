@@ -2,12 +2,12 @@ extends Node
 
 var tower_data = {
 	"TankSniper": {
-		"damage": 20,
+		"damage": 40,
 		"rof": 2,
-		"range": 1050,
+		"range": 2050,
 		"category": "Sniper"},
 	"FlameTower": {
-		"damage": 20,
+		"damage": 10,
 		"rof": 0.1,
 		"range": 100,
 		"category": "Flame"},
@@ -18,7 +18,7 @@ var tower_data = {
 		"category": "Tack"},
 	"Revolver": {
 		"damage": 100,
-		"rof": 1,
+		"rof": 0.5,
 		"range": 800,
 		"category": "Spray"}
 }

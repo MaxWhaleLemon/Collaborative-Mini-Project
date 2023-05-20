@@ -58,19 +58,16 @@ func fire():
 				var bullet = bullet_scene.instantiate()
 				bullet.direction = $Turret/Flame.global_position - global_position
 				bullet.global_position = $Turret/Flame.global_position
-				bullet.global_rotation = $Turret/Flame.global_rotation
 				get_tree().get_root().add_child(bullet)
 				
 				var bullet2 = bullet_scene.instantiate()
 				bullet2.direction = $Turret/Flame2.global_position - global_position
 				bullet2.global_position = $Turret/Flame2.global_position
-				bullet2.global_rotation = $Turret/Flame2.global_rotation
 				get_tree().get_root().add_child(bullet2)
 				
 				var bullet3 = bullet_scene.instantiate()
 				bullet3.direction = $Turret/Flame3.global_position - global_position
 				bullet3.global_position = $Turret/Flame3.global_position
-				bullet3.global_rotation = $Turret/Flame3.global_rotation
 				get_tree().get_root().add_child(bullet3)
 				
 			remaining_bullets = remaining_bullets - 1
