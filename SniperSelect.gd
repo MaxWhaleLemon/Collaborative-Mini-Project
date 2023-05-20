@@ -1,7 +1,6 @@
 extends Button
 
 @onready var tank = preload("res://tank_sniper.tscn")
-var sniperCount = GlobalScript.SniperCurrentAMOUNT
 var currTile
 var sniperMax = GlobalScript.SniperMaxAMOUNT
 #var mouse_tile = Vector2i(local_to_map(get_global_mouse_position()))
@@ -15,7 +14,7 @@ func _input(event):
 #	print(is_hovered())
 	#print(tanknode)
 	#print(tanknode.map_to_local())
-	if sniperCount <= sniperMax - 1:
+	if GlobalScript.SniperCurrentAMOUNT<= GlobalScript.SniperMaxAMOUNT - 1:
 		var tempTank = tank.instantiate()
 		if event is InputEventMouseButton and event.button_mask == 1 and is_hovered():
 			SniperActive = true
@@ -23,7 +22,6 @@ func _input(event):
 			add_child(tempTank)
 			tempTank.global_position = event.global_position
 			tempTank.process_mode = Node.PROCESS_MODE_DISABLED
-			
 		elif event is InputEventMouseMotion and event.button_mask == 1:
 #			print("clicking and dragging")
 			#button left down and dragging
@@ -31,9 +29,9 @@ func _input(event):
 #				print("and the get child count > 1")
 				get_child(0).global_position = event.global_position
 #				#Check if on Dirt Tile.
-				var tile = ObsMapNode.local_to_map(get_global_mouse_position())
+				var tile = ObsMapNode.local_to_map(get_global_mouse_position()*2)
 				var TileNewpos = ObsMapNode.map_to_local(tile)
-				get_child(0).global_position = TileNewpos
+				get_child(0).global_position = TileNewpos/2
 #				currTile = ObsMapNode.get_cell_atlas_coords(0, tile, false)
 #				print(currTile)
 #				var targets = get_child(0).get_node("tankDetector").get_overlapping_bodies()
@@ -46,7 +44,7 @@ func _input(event):
 #					get_child(0).get_node("Area").modulate = Color(255,255,255)
 		elif event is InputEventMouseButton and event.button_mask == 0 and SniperActive == true:
 			#button left release
-			GlobalScript.SniperCurrentAMOUNT = sniperCount + 1
+			GlobalScript.SniperCurrentAMOUNT = GlobalScript.SniperCurrentAMOUNT + 1
 			if event.global_position.x <= 200:
 				if get_child_count() > 1:
 					get_child(0).queue_free()
@@ -63,10 +61,10 @@ func _input(event):
 				#if (targets.size() < 3):
 				path.add_child(tempTank)
 				tempTank.get_node("Range").hide()
-				var tile = ObsMapNode.local_to_map(get_global_mouse_position())
+				var tile = ObsMapNode.local_to_map(get_global_mouse_position()*2)
 				var TileNewpos = ObsMapNode.map_to_local(tile)
 				print("tile new pos", TileNewpos)
-				get_child(0).position = TileNewpos
+				tempTank.global_position = TileNewpos/2
 				
 				print("c")
 				SniperActive = false

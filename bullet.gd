@@ -10,8 +10,8 @@ func _process(delta):
 
 
 func _on_body_entered(body):
-	print("collision")
-	print(body)
+#	print("collision")
+#	print(body)
 	var enemy = body.get_parent()
 	enemy.on_hit(GameData.tower_data[type]["damage"])
 	queue_free()

@@ -53,7 +53,7 @@ func fire():
 
 func _ready():
 	if built:
-		self.get_node("Range/CollisionShape2D").get_shape().radius = 0.5 * GameData.tower_data[self.get_name()]["range"]
+		self.get_node("Range/CollisionShape2D").get_shape().radius = 2 * GameData.tower_data[type]["range"]
 
 func _on_range_body_entered(body):
 	enemy_array.append(body.get_parent())
