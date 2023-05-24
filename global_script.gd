@@ -6,44 +6,58 @@ var MaxHealth = 10
 var CurrentHealth = 10
 var HealthRegen = 1
 
-var SniperDMG = 20
-var FlameDMG = 1
-var TackDMG = 4
-var SiloDMG = 4
+var SniperDMG = 40
+var FlameDMG = 3
+var TackDMG = 10
+var SiloDMG = 100
 
-var SniperMaxAMMO = 5
-var FlameMaxAMMO = 50
-var TackMaxAMMO = 25
-var SiloMaxAMMO = 25
+var SniperMaxAMMO = 6
+var FlameMaxAMMO = 65
+var TackMaxAMMO = 8
+var SiloMaxAMMO = 16
 
-var SniperCurrentAMMO = 5
-var FlameCurrentAMMO = 50
-var TackCurrentAMMO = 25
-var SiloCurrentAMMO = 25
+var SniperCurrentAMMO = 6
+var FlameCurrentAMMO = 65
+var TackCurrentAMMO = 8
+var SiloCurrentAMMO = 16
 
-var SniperSPEED = 1
-var FlameSPEED = 10
-var TackSPEED = 5
-var SiloSPEED = 5
+var SniperSPEED = 2
+var FlameSPEED = 0.1
+var TackSPEED = 1
+var SiloSPEED = 0.25
 
 var SniperREGEN = 1
 var FlameREGEN = 1
 var TackREGEN = 1
 var SiloREGEN = 1
 
-var SniperRANGE = 1
-var FlameRANGE = 1
-var TackRANGE = 1
-var SiloRANGE = 1
+var SniperRANGE = 2050
+var FlameRANGE = 100
+var TackRANGE = 800
+var SiloRANGE = 1600
 
-var Round = 1
+var Round = 0
 var Score = 0
 var Highscore = 0
 
 
+var leaderboardbutton = false
 
-#The Algorithm Spot
 
+#tom's code was broken without these variables (???)
+var SniperMaxAMOUNT = 1 
+var SniperCurrentAMOUNT = 0
+var SiloMaxAMOUNT = 1 
+var SiloCurrentAMOUNT = 0
+var FlameMaxAMOUNT = 1 
+var FlameCurrentAMOUNT = 0
+var TackMaxAMOUNT = 1 
+var TackCurrentAMOUNT = 0
+
+
+
+
+#these are for the wave generation
 var Difficulty = 10
 var NormalEnemy = 0
 var StrongEnemy = 0
@@ -66,7 +80,8 @@ func _process(_delta):
 	if CurrentHealth <= 0:
 		get_tree().change_scene_to_file("res://scene_handler_end.tscn")
 
-
+	if CurrentHealth > MaxHealth:
+		CurrentHealth = MaxHealth
 
 func save_highscore():
 	print('saving...')

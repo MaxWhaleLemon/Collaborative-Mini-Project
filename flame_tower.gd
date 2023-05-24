@@ -5,8 +5,8 @@ var enemy_array = []
 var built = true
 var readyBullet = true
 var type = "FlameTower"
-var remaining_bullets = 100
-var max_bullets = 100
+var remaining_bullets = GlobalScript.FlameCurrentAMMO
+var max_bullets = GlobalScript.FlameMaxAMMO
 var category
 
 

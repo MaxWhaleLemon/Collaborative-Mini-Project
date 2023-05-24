@@ -2,23 +2,23 @@ extends Node
 
 var tower_data = {
 	"TankSniper": {
-		"damage": 40,
-		"rof": 2,
-		"range": 2050,
+		"damage": GlobalScript.SniperDMG,
+		"rof": GlobalScript.SniperSPEED,
+		"range": GlobalScript.SniperRANGE,
 		"category": "Sniper"},
 	"FlameTower": {
-		"damage": 10,
-		"rof": 0.1,
-		"range": 100,
+		"damage": GlobalScript.FlameDMG,
+		"rof": GlobalScript.FlameSPEED,
+		"range": GlobalScript.FlameRANGE,
 		"category": "Flame"},
 	"TackShooter": {
-		"damage": 10,
-		"rof": 1,
-		"range": 800,
+		"damage": GlobalScript.TackDMG,
+		"rof": GlobalScript.TackSPEED,
+		"range": GlobalScript.TackRANGE,
 		"category": "Tack"},
 	"Revolver": {
-		"damage": 100,
-		"rof": 0.5,
-		"range": 800,
+		"damage": GlobalScript.SiloDMG,
+		"rof": GlobalScript.SiloSPEED,
+		"range": GlobalScript.SiloRANGE,
 		"category": "Spray"}
 }

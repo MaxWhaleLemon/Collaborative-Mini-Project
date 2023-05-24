@@ -18,7 +18,7 @@ var button3 = upgradeStringArray[2]
 
 func randomizeArrayOrder():
 	print("upgradeArray a", upgradeArray)
-	upgradeArray.shuffle()
+	upgradeStringArray.shuffle()
 	print("upgradeArray b", upgradeArray)
 	print(upgradeArray)
 	

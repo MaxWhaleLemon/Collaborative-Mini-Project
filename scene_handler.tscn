@@ -1,12 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://b7wpgx5qwgx8t"]
+[gd_scene load_steps=7 format=3 uid="uid://b7wpgx5qwgx8t"]
 
 [ext_resource type="Script" path="res://scene_handler_GUI.gd" id="1_svlwm"]
 [ext_resource type="PackedScene" uid="uid://cbonfwkwmq331" path="res://Map1.tscn" id="1_wyawx"]
 [ext_resource type="FontFile" uid="uid://dkiu3auiayguu" path="res://VCR_OSD_MONO_1.001.ttf" id="2_vjhjc"]
 [ext_resource type="Script" path="res://SniperSelect.gd" id="3_jskq2"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ldbig"]
-size = Vector2(89, 90)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q1oep"]
 bg_color = Color(0.270588, 0, 0.0156863, 1)
@@ -106,36 +103,6 @@ theme_override_fonts/font = ExtResource("2_vjhjc")
 theme_override_font_sizes/font_size = 50
 text = "ROCKET SILO"
 
-<<<<<<< Updated upstream
-[node name="ColorRect" type="ColorRect" parent="HBoxContainer/InfoBarLeft"]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -199.0
-offset_right = 348.0
-offset_bottom = -22.0
-color = Color(0.615686, 0.615686, 0.615686, 1)
-
-[node name="Label" type="Label" parent="HBoxContainer/InfoBarLeft/ColorRect"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_right = 1.0
-offset_bottom = 23.0
-grow_horizontal = 2
-theme_override_fonts/font = ExtResource("2_vjhjc")
-theme_override_font_sizes/font_size = 40
-text = "AMMO BOX"
-horizontal_alignment = 1
-
-[node name="Area2D" type="Area2D" parent="HBoxContainer/InfoBarLeft/ColorRect/Label"]
-modulate = Color(0.352941, 0.352941, 0.352941, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HBoxContainer/InfoBarLeft/ColorRect/Label/Area2D"]
-position = Vector2(176, 100)
-shape = SubResource("RectangleShape2D_ldbig")
-=======
 [node name="Label" type="Label" parent="HBoxContainer/InfoBarLeft/BoxContainer"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
@@ -178,7 +145,6 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_vjhjc")
 theme_override_font_sizes/font_size = 40
 text = "100"
->>>>>>> Stashed changes
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
 custom_minimum_size = Vector2(600, 0)

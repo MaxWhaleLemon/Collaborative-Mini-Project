@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cjeun67lvpbm6"]
+[gd_scene load_steps=3 format=3 uid="uid://cjeun67lvpbm6"]
 
+[ext_resource type="Script" path="res://upgrade scenes/silo_ammo_up.gd" id="1_8nfjc"]
 [ext_resource type="FontFile" uid="uid://dkiu3auiayguu" path="res://VCR_OSD_MONO_1.001.ttf" id="1_xpmbo"]
 
 [node name="SILO_AMMO_UP" type="Node"]
+script = ExtResource("1_8nfjc")
 
 [node name="Upgrade_Button" type="Button" parent="."]
 custom_minimum_size = Vector2(0, 100)
@@ -10,3 +12,5 @@ size_flags_stretch_ratio = 0.0
 theme_override_fonts/font = ExtResource("1_xpmbo")
 theme_override_font_sizes/font_size = 70
 text = "SILO AMMO UP"
+
+[connection signal="pressed" from="Upgrade_Button" to="." method="_on_upgrade_button_pressed"]

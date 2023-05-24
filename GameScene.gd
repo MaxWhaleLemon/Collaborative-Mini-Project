@@ -13,7 +13,12 @@ func _physics_process(delta):
 		GlobalScript.CurrentHealth = GlobalScript.CurrentHealth + GlobalScript.HealthRegen
 
 func _ready():
+	GlobalScript.SniperMaxAMOUNT = 1
+	GlobalScript.SniperCurrentAMOUNT = 0
 	
+	
+	
+	GlobalScript.Round = GlobalScript.Round + 1
 	
 	while GlobalScript.Difficulty >= 0:
 		var random_enemy = randi() % 3
@@ -22,17 +27,17 @@ func _ready():
 		if random_enemy == 0:
 			GlobalScript.NormalEnemy = GlobalScript.NormalEnemy + 1
 			GlobalScript.Difficulty = GlobalScript.Difficulty - 2
-			GlobalScript.WaveCounter = GlobalScript.WaveCounter + 1
+
 
 		elif random_enemy == 1:
 			GlobalScript.StrongEnemy = GlobalScript.StrongEnemy + 1
 			GlobalScript.Difficulty = GlobalScript.Difficulty - 4
-			GlobalScript.WaveCounter = GlobalScript.WaveCounter + 1
+
 
 		elif random_enemy == 2:
 			GlobalScript.FastEnemy = GlobalScript.FastEnemy + 1
 			GlobalScript.Difficulty = GlobalScript.Difficulty - 8
-			GlobalScript.WaveCounter = GlobalScript.WaveCounter + 1
+			
 		print(GlobalScript.Difficulty)
 
 
@@ -56,17 +61,20 @@ func start_next_wave():
 	await(get_tree().create_timer(0.2).timeout)
 	spawn_enemies(wave_data)
 
+
 func retrieve_wave_data():
 	#var wave_data = [["enemy_test", 0.7]]
 	for i in GlobalScript.NormalEnemy:
 		wave_data.append(["enemy_test"])
-
+		GlobalScript.WaveCounter = GlobalScript.WaveCounter + 1
+		
 	for i in GlobalScript.StrongEnemy:
 		wave_data.append(["enemy_test_strong"])
-
+		GlobalScript.WaveCounter = GlobalScript.WaveCounter + 1
+		
 	for i in GlobalScript.FastEnemy:
 		wave_data.append(["enemy_test_fast"])
-		
+		GlobalScript.WaveCounter = GlobalScript.WaveCounter + 1
 		
 	
 	current_wave +- 1

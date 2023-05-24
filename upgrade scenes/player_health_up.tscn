@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://djv7nm1c1ewip"]
+[gd_scene load_steps=3 format=3 uid="uid://djv7nm1c1ewip"]
 
 [ext_resource type="FontFile" uid="uid://dkiu3auiayguu" path="res://VCR_OSD_MONO_1.001.ttf" id="1_geqaj"]
+[ext_resource type="Script" path="res://upgrade scenes/player_health_up.gd" id="1_tvmo7"]
 
 [node name="PLAYER_HEALTH_UP" type="Node"]
+script = ExtResource("1_tvmo7")
 
 [node name="Upgrade_Button" type="Button" parent="."]
 custom_minimum_size = Vector2(0, 100)
@@ -12,3 +14,5 @@ size_flags_stretch_ratio = 0.0
 theme_override_fonts/font = ExtResource("1_geqaj")
 theme_override_font_sizes/font_size = 70
 text = "HEALTH UP"
+
+[connection signal="pressed" from="Upgrade_Button" to="." method="_on_upgrade_button_pressed"]

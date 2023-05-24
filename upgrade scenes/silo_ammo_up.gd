@@ -1,7 +1,7 @@
 extends Node
 
 func _on_upgrade_button_pressed():
-	GlobalScript.FlameMaxAMMO = GlobalScript.FlameMaxAMMO + 50
+	GlobalScript.SiloMaxAMMO = GlobalScript.SiloMaxAMMO + 8
 	GlobalScript.CurrentHealth = GlobalScript.CurrentHealth + GlobalScript.HealthRegen
 	GlobalScript.Difficulty = GlobalScript.Difficulty + 4
 	GlobalScript.TackCurrentAMMO = GlobalScript.TackMaxAMMO

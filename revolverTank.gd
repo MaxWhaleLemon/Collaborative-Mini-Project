@@ -5,8 +5,8 @@ var enemy_array = []
 var built = true
 var readyBullet = true
 var type = "Revolver"
-var remaining_bullets = 100
-var max_bullets = 100
+var remaining_bullets = GlobalScript.SiloCurrentAMMO
+var max_bullets = GlobalScript.SiloMaxAMMO
 var category
 var bullet_scene = preload("res://revolverbullet.tscn")
 @export var fire_type = 2

@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://eb0gxuutc67b"]
+[gd_scene load_steps=3 format=3 uid="uid://eb0gxuutc67b"]
 
+[ext_resource type="Script" path="res://upgrade scenes/sniper_power_up.gd" id="1_rb0mm"]
 [ext_resource type="FontFile" uid="uid://dkiu3auiayguu" path="res://VCR_OSD_MONO_1.001.ttf" id="1_xhq1q"]
 
 [node name="SNIPER_POWER_UP" type="Node"]
+script = ExtResource("1_rb0mm")
 
 [node name="Upgrade_Button" type="Button" parent="."]
 custom_minimum_size = Vector2(0, 100)
@@ -10,3 +12,5 @@ size_flags_stretch_ratio = 0.0
 theme_override_fonts/font = ExtResource("1_xhq1q")
 theme_override_font_sizes/font_size = 70
 text = "SNIPER POWER UP"
+
+[connection signal="pressed" from="Upgrade_Button" to="." method="_on_upgrade_button_pressed"]

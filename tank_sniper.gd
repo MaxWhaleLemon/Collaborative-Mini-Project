@@ -5,8 +5,8 @@ var enemy_array = []
 var built = true
 var readyBullet = true
 var type = "TankSniper"
-var remaining_bullets = 6
-var max_bullets = 6
+var remaining_bullets = GlobalScript.SniperCurrentAMMO
+var max_bullets = GlobalScript.SniperMaxAMMO
 var category
 
 

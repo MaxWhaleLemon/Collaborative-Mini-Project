@@ -1,6 +1,6 @@
 extends Node2D
 
-var bullet_damage = 20
+var bullet_damage = GlobalScript.SniperDMG
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

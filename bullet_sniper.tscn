@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cyiycqq0e3j3a"]
 
 [ext_resource type="Script" path="res://bullet_sniper.gd" id="1_6asei"]
-[ext_resource type="Texture2D" uid="uid://doxxifyjsd8i8" path="res://TankStorage/GreenBullet.png" id="2_ai5re"]
+[ext_resource type="Texture2D" uid="uid://dd5me4jg6v4kb" path="res://TankStorage/GreenBullet.png" id="2_ai5re"]
 
 [node name="BulletSniper" type="Node2D"]
 script = ExtResource("1_6asei")

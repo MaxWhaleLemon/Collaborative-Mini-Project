@@ -5,8 +5,8 @@ var enemy_array = []
 var built = true
 var readyBullet = true
 var type = "TackShooter"
-var remaining_bullets = 8
-var max_bullets = 8
+var remaining_bullets = GlobalScript.TackCurrentAMMO
+var max_bullets = GlobalScript.TackMaxAMMO
 var category
 var bullet_scene = preload("res://bullet.tscn")
 
